@@ -14,8 +14,6 @@
     --js:#F7DF1E;--react:#61DAFB;--rn:#00D2FF;--node:#68A063;--dsa:#FF6B6B;
   }
   body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
-
-  /* ── TOP NAV ── */
   .topbar{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
   .topbar h1{font-size:16px;font-weight:800;color:var(--white);white-space:nowrap}
   .topbar h1 span{color:var(--accent)}
@@ -27,30 +25,17 @@
   .progress-pill span{color:var(--green)}
   .btn-mode{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;color:var(--text);transition:.2s}
   .btn-mode:hover,.btn-mode.active{background:var(--accent);border-color:var(--accent);color:#000}
-
-  /* ── TABS ── */
   .tabs{display:flex;gap:0;border-bottom:1px solid var(--border);padding:0 20px;overflow-x:auto;background:var(--surface)}
   .tab{padding:12px 20px;font-size:13px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;color:var(--muted);white-space:nowrap;transition:.2s;display:flex;align-items:center;gap:8px}
   .tab:hover{color:var(--text)}
   .tab.active{color:var(--white);border-bottom-color:var(--accent)}
   .tab .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
-  .tab-js .dot{background:var(--js)}
-  .tab-react .dot{background:var(--react)}
-  .tab-rn .dot{background:var(--rn)}
-  .tab-node .dot{background:var(--node)}
-  .tab-dsa .dot{background:var(--dsa)}
-  .tab-diagrams .dot{background:var(--purple)}
+  .tab-js .dot{background:var(--js)}.tab-react .dot{background:var(--react)}.tab-rn .dot{background:var(--rn)}.tab-node .dot{background:var(--node)}.tab-dsa .dot{background:var(--dsa)}.tab-diagrams .dot{background:var(--purple)}
   .badge{background:var(--border);border-radius:10px;padding:1px 7px;font-size:11px;font-weight:700}
-
-  /* ── MAIN ── */
   .main{max-width:1100px;margin:0 auto;padding:20px}
-
-  /* ── FILTERS ── */
   .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
   .filter-btn{padding:5px 12px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:12px;cursor:pointer;transition:.2s}
   .filter-btn:hover,.filter-btn.on{background:var(--accent);border-color:var(--accent);color:#000;font-weight:600}
-
-  /* ── CARDS ── */
   .cards{display:grid;gap:12px}
   .card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:.2s}
   .card:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
@@ -58,18 +43,16 @@
   .card-head{padding:14px 16px;display:flex;align-items:flex-start;gap:12px;cursor:pointer}
   .q-num{font-size:11px;font-weight:700;color:var(--muted);min-width:26px;padding-top:2px}
   .q-text{font-size:14px;font-weight:600;color:var(--white);flex:1;line-height:1.5}
-  .card-head .toggle-icon{color:var(--muted);transition:.3s;flex-shrink:0;margin-top:2px}
+  .toggle-icon{color:var(--muted);transition:.3s;flex-shrink:0;margin-top:2px}
   .card.open .toggle-icon{transform:rotate(180deg);color:var(--accent)}
   .card-body{display:none;padding:0 16px 16px 54px;border-top:1px solid var(--border)}
   .card.open .card-body{display:block}
-  .answer-text{font-size:13.5px;line-height:1.7;color:var(--text);padding-top:12px}
+  .answer-text{font-size:13.5px;line-height:1.7;color:var(--text);padding-top:12px;white-space:pre-wrap}
   .tags-row{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
   .tag{background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.25);color:var(--accent);padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600}
   .done-btn{margin-top:12px;padding:6px 16px;border-radius:8px;border:1px solid var(--green);background:transparent;color:var(--green);font-size:12px;font-weight:600;cursor:pointer;transition:.2s}
   .done-btn:hover,.card.done .done-btn{background:var(--green);color:#000}
   .card.done .done-btn::before{content:"✓ "}
-
-  /* FLASHCARD MODE */
   .flashcard-wrap{display:none;flex-direction:column;align-items:center;gap:20px;padding:10px 0}
   .flashcard-wrap.active{display:flex}
   .fc-counter{font-size:13px;color:var(--muted);font-weight:600}
@@ -92,8 +75,6 @@
   .fc-btn.skip:hover{background:var(--orange);color:#000}
   .fc-shuffle{padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:12px;cursor:pointer;transition:.2s}
   .fc-shuffle:hover{color:var(--accent);border-color:var(--accent)}
-
-  /* ── DIAGRAMS ── */
   .diagram-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:20px}
   @media(max-width:520px){.diagram-grid{grid-template-columns:1fr}}
   .diagram-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
@@ -101,38 +82,28 @@
   .diagram-body{padding:20px 18px}
   svg.diag{width:100%;overflow:visible}
   text{font-family:'Inter',sans-serif;font-size:12px;fill:#C9D1D9}
-  .label{font-weight:700;font-size:13px;fill:#F0F6FC}
-  .arrow{stroke:#30363D;stroke-width:1.5;fill:none;marker-end:url(#arr)}
   .cmp-table{width:100%;border-collapse:collapse;font-size:12px}
   .cmp-table th{background:var(--surface);color:var(--muted);padding:8px 10px;text-align:left;font-weight:600;border-bottom:1px solid var(--border)}
   .cmp-table td{padding:8px 10px;border-bottom:1px solid rgba(48,54,61,.5);vertical-align:top;line-height:1.5}
   .cmp-table tr:last-child td{border:none}
-  .yes{color:var(--green);font-weight:700}
-  .no{color:var(--orange);font-weight:700}
-
-  /* ── STATS ── */
+  .yes{color:var(--green);font-weight:700}.no{color:var(--orange);font-weight:700}
   .stats-bar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
   .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 18px;flex:1;min-width:120px}
   .stat-num{font-size:28px;font-weight:800;color:var(--white)}
   .stat-label{font-size:11px;color:var(--muted);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
   .progress-bar-wrap{background:var(--border);border-radius:10px;height:6px;margin-top:8px;overflow:hidden}
   .progress-bar{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--green));transition:.5s}
-
   .empty{text-align:center;padding:60px 20px;color:var(--muted)}
   mark{background:rgba(227,179,65,.3);color:var(--yellow);border-radius:3px;padding:0 2px}
-
-  /* ── CODE BLOCK ── */
   .code{background:#0D1117;border:1px solid var(--border);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;overflow-x:auto;margin-top:10px;white-space:pre}
   .kw{color:#FF7B72}.fn{color:#D2A8FF}.str{color:#A5D6FF}.cmt{color:#8B949E}.op{color:#79C0FF}.num{color:#F2CC60}
-
-  /* ── DSA SPECIFIC ── */
   .dsa-badge{padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;margin-left:8px}
   .complexity-row{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
   .complexity-pill{padding:4px 10px;border-radius:8px;font-size:11px;font-weight:700;border:1px solid}
   .time-pill{background:rgba(63,185,80,.1);border-color:rgba(63,185,80,.3);color:var(--green)}
   .space-pill{background:rgba(88,166,255,.1);border-color:rgba(88,166,255,.3);color:var(--accent)}
   .today-badge{background:rgba(227,179,65,.15);border:1px solid rgba(227,179,65,.3);color:var(--yellow);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;margin-left:6px}
-  .add-btn{background:var(--card);border:1px dashed var(--dsa);color:var(--dsa);border-radius:12px;padding:16px;text-align:center;cursor:pointer;font-size:13px;font-weight:600;transition:.2s;margin-top:8px;margin-bottom:4px}
+  .add-btn{background:var(--card);border:1px dashed var(--dsa);color:var(--dsa);border-radius:12px;padding:16px;text-align:center;cursor:pointer;font-size:13px;font-weight:600;transition:.2s;margin-bottom:4px}
   .add-btn:hover{background:rgba(255,107,107,.1)}
   .add-form{background:var(--card);border:1px solid var(--dsa);border-radius:12px;padding:20px;margin-bottom:12px;display:none}
   .add-form.open{display:block}
@@ -143,27 +114,16 @@
   .form-group textarea{min-height:80px;resize:vertical}
   .form-group select option{background:var(--card)}
   .form-actions{display:flex;gap:10px}
-  .btn-save{background:var(--dsa);border:none;border-radius:8px;padding:10px 20px;color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:.2s}
+  .btn-save{background:var(--dsa);border:none;border-radius:8px;padding:10px 20px;color:#fff;font-size:13px;font-weight:700;cursor:pointer}
   .btn-save:hover{opacity:.85}
   .btn-cancel{background:transparent;border:1px solid var(--border);border-radius:8px;padding:10px 20px;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer}
-  .delete-btn{margin-top:12px;margin-left:8px;padding:6px 14px;border-radius:8px;border:1px solid var(--orange);background:transparent;color:var(--orange);font-size:12px;font-weight:600;cursor:pointer;transition:.2s}
+  .delete-btn{margin-top:12px;margin-left:8px;padding:6px 14px;border-radius:8px;border:1px solid var(--orange);background:transparent;color:var(--orange);font-size:12px;font-weight:600;cursor:pointer}
   .delete-btn:hover{background:var(--orange);color:#000}
-
-  ::-webkit-scrollbar{width:6px;height:6px}
-  ::-webkit-scrollbar-track{background:var(--bg)}
-  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-  ::-webkit-scrollbar-thumb:hover{background:var(--muted)}
-
-  @media(max-width:600px){
-    .topbar{gap:8px}.tabs{padding:0 10px}.tab{padding:10px 12px;font-size:12px}
-    .main{padding:12px}.diagram-grid{grid-template-columns:1fr}
-    .fc-q{font-size:15px}.fc-scene{height:300px}
-  }
+  ::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+  @media(max-width:600px){.topbar{gap:8px}.tabs{padding:0 10px}.tab{padding:10px 12px;font-size:12px}.main{padding:12px}.fc-q{font-size:15px}.fc-scene{height:300px}}
 </style>
 </head>
 <body>
-
-<!-- TOPBAR -->
 <div class="topbar">
   <h1>⚡ <span>Full-Stack</span> + DSA Prep</h1>
   <div class="search-box">
@@ -174,8 +134,6 @@
   <button class="btn-mode active" id="btnStudy" onclick="setMode('study')">📖 Study</button>
   <button class="btn-mode" id="btnFlash" onclick="setMode('flash')">🃏 Flashcard</button>
 </div>
-
-<!-- TABS -->
 <div class="tabs">
   <div class="tab tab-js active" onclick="setTab('js')"><span class="dot"></span>JavaScript<span class="badge" id="badge-js">50</span></div>
   <div class="tab tab-react" onclick="setTab('react')"><span class="dot"></span>React JS<span class="badge" id="badge-react">49</span></div>
@@ -184,42 +142,24 @@
   <div class="tab tab-dsa" onclick="setTab('dsa')"><span class="dot"></span>🔥 DSA<span class="badge" id="badge-dsa">2</span></div>
   <div class="tab tab-diagrams" onclick="setTab('diagrams')"><span class="dot"></span>🎨 Visual Diagrams</div>
 </div>
-
 <div class="main">
-
-  <!-- STATS -->
   <div class="stats-bar" id="statsBar">
     <div class="stat"><div class="stat-num" id="s-total">0</div><div class="stat-label">Total Q&A</div><div class="progress-bar-wrap"><div class="progress-bar" id="s-bar" style="width:0%"></div></div></div>
     <div class="stat"><div class="stat-num" id="s-done" style="color:var(--green)">0</div><div class="stat-label">Completed</div></div>
     <div class="stat"><div class="stat-num" id="s-pct" style="color:var(--accent)">0%</div><div class="stat-label">Progress</div></div>
     <div class="stat"><div class="stat-num" id="s-left" style="color:var(--yellow)">0</div><div class="stat-label">Remaining</div></div>
   </div>
-
-  <!-- FILTERS -->
   <div class="filters" id="filtersRow"></div>
-
-  <!-- STUDY MODE -->
   <div id="studyView">
     <div class="cards" id="cardList"></div>
-    <div class="empty" id="emptyMsg" style="display:none">
-      <p>No questions match your search.</p>
-    </div>
+    <div class="empty" id="emptyMsg" style="display:none"><p>No questions match your search.</p></div>
   </div>
-
-  <!-- FLASHCARD MODE -->
   <div class="flashcard-wrap" id="flashView">
     <div class="fc-counter" id="fcCounter">Card 1 of 50</div>
     <div class="fc-scene" onclick="flipCard()">
       <div class="fc-card" id="fcCard">
-        <div class="fc-face fc-front">
-          <div class="fc-hint">TAP TO REVEAL ANSWER</div>
-          <div class="fc-q" id="fcQ">Loading…</div>
-        </div>
-        <div class="fc-face fc-back">
-          <div class="fc-hint" style="align-self:flex-start">ANSWER</div>
-          <div class="fc-a" id="fcA"></div>
-          <div class="fc-tags" id="fcTags"></div>
-        </div>
+        <div class="fc-face fc-front"><div class="fc-hint">TAP TO REVEAL ANSWER</div><div class="fc-q" id="fcQ">Loading…</div></div>
+        <div class="fc-face fc-back"><div class="fc-hint" style="align-self:flex-start">ANSWER</div><div class="fc-a" id="fcA"></div><div class="fc-tags" id="fcTags"></div></div>
       </div>
     </div>
     <div class="fc-controls">
@@ -229,12 +169,8 @@
     </div>
     <button class="fc-shuffle" onclick="shuffleCards()">🔀 Shuffle deck</button>
   </div>
-
-  <!-- DIAGRAMS TAB -->
   <div id="diagramView" style="display:none">
     <div class="diagram-grid">
-
-      <!-- 1: JS EVENT LOOP -->
       <div class="diagram-card">
         <h3>🔄 JavaScript Event Loop</h3>
         <div class="diagram-body">
@@ -242,12 +178,9 @@
             <defs><marker id="arr" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#58A6FF"/></marker></defs>
             <rect x="20" y="20" width="120" height="240" rx="8" fill="#1C2128" stroke="#F78166" stroke-width="1.5"/>
             <text x="80" y="14" text-anchor="middle" fill="#F78166" font-weight="700" font-size="11">CALL STACK</text>
-            <rect x="28" y="180" width="104" height="35" rx="5" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/>
-            <text x="80" y="202" text-anchor="middle" fill="#F78166" font-size="11">console.log()</text>
-            <rect x="28" y="138" width="104" height="35" rx="5" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/>
-            <text x="80" y="160" text-anchor="middle" fill="#F78166" font-size="11">fetchData()</text>
-            <rect x="28" y="96" width="104" height="35" rx="5" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/>
-            <text x="80" y="118" text-anchor="middle" fill="#F78166" font-size="11">main()</text>
+            <rect x="28" y="180" width="104" height="35" rx="5" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/><text x="80" y="202" text-anchor="middle" fill="#F78166" font-size="11">console.log()</text>
+            <rect x="28" y="138" width="104" height="35" rx="5" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/><text x="80" y="160" text-anchor="middle" fill="#F78166" font-size="11">fetchData()</text>
+            <rect x="28" y="96" width="104" height="35" rx="5" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/><text x="80" y="118" text-anchor="middle" fill="#F78166" font-size="11">main()</text>
             <rect x="165" y="60" width="120" height="90" rx="8" fill="#1C2128" stroke="#E3B341" stroke-width="1.5"/>
             <text x="225" y="54" text-anchor="middle" fill="#E3B341" font-weight="700" font-size="11">WEB APIS</text>
             <text x="225" y="90" text-anchor="middle" fill="#E3B341" font-size="11">setTimeout</text>
@@ -274,10 +207,9 @@
             <text x="225" y="245" text-anchor="middle" fill="#BC8CFF" font-size="10">② Microtasks next</text>
             <text x="367" y="245" text-anchor="middle" fill="#3FB950" font-size="10">③ Macro last</text>
           </svg>
+          <div style="margin-top:12px;font-size:12px;color:var(--muted);line-height:1.6"><b style="color:var(--white)">Order:</b> Call Stack → <span style="color:#BC8CFF">Microtasks (Promises)</span> → <span style="color:#3FB950">Macro tasks (setTimeout)</span></div>
         </div>
       </div>
-
-      <!-- 2: PROMISE STATES -->
       <div class="diagram-card">
         <h3>⏳ Promise States & Chaining</h3>
         <div class="diagram-body">
@@ -294,25 +226,138 @@
             <text x="230" y="147" text-anchor="middle" fill="#F78166" font-size="10">✗ reject(err)</text>
             <line x1="110" y1="82" x2="183" y2="57" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arr2)"/>
             <line x1="110" y1="108" x2="183" y2="130" stroke="#F78166" stroke-width="1.5" marker-end="url(#arr2)"/>
-            <text x="135" y="68" fill="#3FB950" font-size="10" transform="rotate(-18,135,68)">resolve</text>
-            <text x="135" y="122" fill="#F78166" font-size="10" transform="rotate(18,135,122)">reject</text>
-            <rect x="310" y="30" width="110" height="35" rx="6" fill="#1C1B2D" stroke="#BC8CFF" stroke-width="1.5"/>
-            <text x="365" y="52" text-anchor="middle" fill="#BC8CFF" font-size="11">.then(onFulfilled)</text>
-            <rect x="310" y="80" width="110" height="35" rx="6" fill="#1C1B2D" stroke="#F78166" stroke-width="1.5"/>
-            <text x="365" y="102" text-anchor="middle" fill="#F78166" font-size="11">.catch(onRejected)</text>
-            <rect x="310" y="130" width="110" height="35" rx="6" fill="#1C2128" stroke="#8B949E" stroke-width="1.5"/>
-            <text x="365" y="152" text-anchor="middle" fill="#8B949E" font-size="11">.finally(always)</text>
+            <rect x="310" y="30" width="110" height="35" rx="6" fill="#1C1B2D" stroke="#BC8CFF" stroke-width="1.5"/><text x="365" y="52" text-anchor="middle" fill="#BC8CFF" font-size="11">.then(onFulfilled)</text>
+            <rect x="310" y="80" width="110" height="35" rx="6" fill="#1C1B2D" stroke="#F78166" stroke-width="1.5"/><text x="365" y="102" text-anchor="middle" fill="#F78166" font-size="11">.catch(onRejected)</text>
+            <rect x="310" y="130" width="110" height="35" rx="6" fill="#1C2128" stroke="#8B949E" stroke-width="1.5"/><text x="365" y="152" text-anchor="middle" fill="#8B949E" font-size="11">.finally(always)</text>
             <line x1="275" y1="55" x2="308" y2="50" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr2)"/>
             <line x1="275" y1="130" x2="308" y2="100" stroke="#F78166" stroke-width="1.5" marker-end="url(#arr2)"/>
             <line x1="365" y1="115" x2="365" y2="128" stroke="#8B949E" stroke-width="1.5" marker-end="url(#arr2)"/>
             <line x1="365" y1="65" x2="365" y2="78" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr2)"/>
           </svg>
+          <div class="code"><span class="kw">const</span> p = <span class="kw">new</span> <span class="fn">Promise</span>((resolve, reject) => {
+  <span class="fn">fetch</span>(<span class="str">'/api/user'</span>)
+    .then(res => <span class="fn">resolve</span>(res.json()))
+    .catch(err => <span class="fn">reject</span>(err));
+});
+p.<span class="fn">then</span>(data => console.<span class="fn">log</span>(data))
+ .<span class="fn">catch</span>(err => console.<span class="fn">error</span>(err))
+ .<span class="fn">finally</span>(() => <span class="fn">hideLoader</span>());</div>
         </div>
       </div>
-
-      <!-- 3: var/let/const -->
       <div class="diagram-card">
-        <h3>📦 var vs let vs const — Scope & Hoisting</h3>
+        <h3>♻️ React Component Lifecycle</h3>
+        <div class="diagram-body">
+          <svg class="diag" viewBox="0 0 440 260" height="260">
+            <defs><marker id="arr3" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#61DAFB"/></marker></defs>
+            <rect x="10" y="10" width="120" height="230" rx="8" fill="rgba(97,218,251,.05)" stroke="#61DAFB" stroke-width="1"/>
+            <text x="70" y="28" text-anchor="middle" fill="#61DAFB" font-weight="700" font-size="11">MOUNT</text>
+            <rect x="18" y="35" width="104" height="30" rx="6" fill="#1C2128" stroke="#61DAFB" stroke-width="1"/><text x="70" y="55" text-anchor="middle" fill="#61DAFB" font-size="11">constructor()</text>
+            <line x1="70" y1="65" x2="70" y2="78" stroke="#61DAFB" stroke-width="1.5" marker-end="url(#arr3)"/>
+            <rect x="18" y="80" width="104" height="30" rx="6" fill="#1C2128" stroke="#61DAFB" stroke-width="1"/><text x="70" y="100" text-anchor="middle" fill="#61DAFB" font-size="11">render()</text>
+            <line x1="70" y1="110" x2="70" y2="123" stroke="#61DAFB" stroke-width="1.5" marker-end="url(#arr3)"/>
+            <rect x="18" y="125" width="104" height="30" rx="6" fill="#1C2128" stroke="#61DAFB" stroke-width="1"/><text x="70" y="145" text-anchor="middle" fill="#61DAFB" font-size="11">DOM updated</text>
+            <line x1="70" y1="155" x2="70" y2="168" stroke="#61DAFB" stroke-width="1.5" marker-end="url(#arr3)"/>
+            <rect x="18" y="170" width="104" height="35" rx="6" fill="#1C2128" stroke="#3FB950" stroke-width="1.5"/>
+            <text x="70" y="188" text-anchor="middle" fill="#3FB950" font-size="10">componentDidMount</text>
+            <text x="70" y="200" text-anchor="middle" fill="#3FB950" font-size="10">= useEffect(fn, [])</text>
+            <rect x="160" y="10" width="120" height="180" rx="8" fill="rgba(188,140,255,.05)" stroke="#BC8CFF" stroke-width="1"/>
+            <text x="220" y="28" text-anchor="middle" fill="#BC8CFF" font-weight="700" font-size="11">UPDATE</text>
+            <rect x="168" y="35" width="104" height="30" rx="6" fill="#1C2128" stroke="#BC8CFF" stroke-width="1"/><text x="220" y="55" text-anchor="middle" fill="#BC8CFF" font-size="11">setState / props</text>
+            <line x1="220" y1="65" x2="220" y2="78" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr3)"/>
+            <rect x="168" y="80" width="104" height="30" rx="6" fill="#1C2128" stroke="#BC8CFF" stroke-width="1"/><text x="220" y="100" text-anchor="middle" fill="#BC8CFF" font-size="11">render()</text>
+            <line x1="220" y1="110" x2="220" y2="123" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr3)"/>
+            <rect x="168" y="125" width="104" height="30" rx="6" fill="#1C2128" stroke="#BC8CFF" stroke-width="1"/><text x="220" y="145" text-anchor="middle" fill="#BC8CFF" font-size="11">DOM updated</text>
+            <line x1="220" y1="155" x2="220" y2="168" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr3)"/>
+            <rect x="168" y="170" width="104" height="30" rx="6" fill="#1C2128" stroke="#BC8CFF" stroke-width="1.5"/>
+            <text x="220" y="183" text-anchor="middle" fill="#BC8CFF" font-size="10">componentDidUpdate</text>
+            <text x="220" y="195" text-anchor="middle" fill="#BC8CFF" font-size="10">= useEffect(fn, [deps])</text>
+            <rect x="310" y="10" width="120" height="110" rx="8" fill="rgba(247,129,102,.05)" stroke="#F78166" stroke-width="1"/>
+            <text x="370" y="28" text-anchor="middle" fill="#F78166" font-weight="700" font-size="11">UNMOUNT</text>
+            <rect x="318" y="35" width="104" height="35" rx="6" fill="#1C2128" stroke="#F78166" stroke-width="1.5"/>
+            <text x="370" y="53" text-anchor="middle" fill="#F78166" font-size="10">componentWillUnmount</text>
+            <text x="370" y="65" text-anchor="middle" fill="#F78166" font-size="10">= useEffect cleanup</text>
+            <rect x="310" y="160" width="120" height="80" rx="8" fill="#1C1B2D" stroke="#3FB950" stroke-width="1.5"/>
+            <text x="370" y="178" text-anchor="middle" fill="#3FB950" font-weight="700" font-size="11">useEffect</text>
+            <text x="370" y="195" text-anchor="middle" fill="#3FB950" font-size="10">[ ] → mount only</text>
+            <text x="370" y="210" text-anchor="middle" fill="#3FB950" font-size="10">[dep] → on change</text>
+            <text x="370" y="225" text-anchor="middle" fill="#3FB950" font-size="10">return fn → cleanup</text>
+          </svg>
+        </div>
+      </div>
+      <div class="diagram-card">
+        <h3>🏪 Redux / RTK Data Flow</h3>
+        <div class="diagram-body">
+          <svg class="diag" viewBox="0 0 440 180" height="180">
+            <defs><marker id="arr4" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#58A6FF"/></marker></defs>
+            <rect x="10" y="65" width="80" height="50" rx="8" fill="#1C2128" stroke="#61DAFB" stroke-width="1.5"/><text x="50" y="86" text-anchor="middle" fill="#61DAFB" font-weight="700" font-size="11">COMPONENT</text><text x="50" y="101" text-anchor="middle" fill="#61DAFB" font-size="10">dispatch(action)</text>
+            <rect x="120" y="65" width="80" height="50" rx="8" fill="#1C2128" stroke="#E3B341" stroke-width="1.5"/><text x="160" y="86" text-anchor="middle" fill="#E3B341" font-weight="700" font-size="11">MIDDLEWARE</text><text x="160" y="101" text-anchor="middle" fill="#E3B341" font-size="10">thunk / saga</text>
+            <rect x="230" y="65" width="80" height="50" rx="8" fill="#1C2128" stroke="#F78166" stroke-width="1.5"/><text x="270" y="86" text-anchor="middle" fill="#F78166" font-weight="700" font-size="11">REDUCER</text><text x="270" y="101" text-anchor="middle" fill="#F78166" font-size="10">(state, action)</text>
+            <rect x="340" y="65" width="90" height="50" rx="8" fill="#1C2128" stroke="#3FB950" stroke-width="1.5"/><text x="385" y="86" text-anchor="middle" fill="#3FB950" font-weight="700" font-size="11">STORE</text><text x="385" y="101" text-anchor="middle" fill="#3FB950" font-size="10">new state 🗃️</text>
+            <line x1="90" y1="88" x2="118" y2="88" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arr4)"/>
+            <line x1="200" y1="88" x2="228" y2="88" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arr4)"/>
+            <line x1="310" y1="88" x2="338" y2="88" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arr4)"/>
+            <path d="M 385 115 Q 385 150 200 150 Q 50 150 50 115" fill="none" stroke="#3FB950" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr4)"/>
+            <text x="220" y="167" text-anchor="middle" fill="#3FB950" font-size="10">re-render subscribed components</text>
+          </svg>
+          <div class="code"><span class="kw">const</span> userSlice = <span class="fn">createSlice</span>({
+  name: <span class="str">'user'</span>,
+  initialState: { data: <span class="kw">null</span> },
+  reducers: { <span class="fn">setUser</span>: (state, action) => { state.data = action.payload } }
+});
+<span class="kw">const</span> user = <span class="fn">useSelector</span>(s => s.user.data);
+<span class="kw">const</span> dispatch = <span class="fn">useDispatch</span>();
+<span class="fn">dispatch</span>(userSlice.actions.<span class="fn">setUser</span>(userData));</div>
+        </div>
+      </div>
+      <div class="diagram-card">
+        <h3>📱 React Native Architecture (Old vs New)</h3>
+        <div class="diagram-body">
+          <svg class="diag" viewBox="0 0 440 240" height="240">
+            <defs><marker id="arr5" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#00D2FF"/></marker></defs>
+            <text x="105" y="18" text-anchor="middle" fill="#F78166" font-weight="700" font-size="12">❌ OLD ARCHITECTURE</text>
+            <rect x="10" y="25" width="90" height="35" rx="6" fill="#1C2128" stroke="#61DAFB" stroke-width="1.5"/><text x="55" y="47" text-anchor="middle" fill="#61DAFB" font-size="11">JS Thread</text>
+            <rect x="70" y="38" width="80" height="25" rx="6" fill="#2D1B1B" stroke="#F78166" stroke-width="1.5"/><text x="110" y="55" text-anchor="middle" fill="#F78166" font-size="10">BRIDGE (JSON)</text>
+            <rect x="120" y="25" width="90" height="35" rx="6" fill="#1C2128" stroke="#F78166" stroke-width="1.5"/><text x="165" y="44" text-anchor="middle" fill="#F78166" font-size="11">Native Thread</text><text x="165" y="55" text-anchor="middle" fill="#F78166" font-size="9">UIView / android.view</text>
+            <text x="105" y="78" text-anchor="middle" fill="#F78166" font-size="10">⚠️ Async JSON → jank on animations</text>
+            <text x="105" y="108" text-anchor="middle" fill="#3FB950" font-weight="700" font-size="12">✅ NEW ARCHITECTURE (JSI)</text>
+            <rect x="10" y="115" width="90" height="35" rx="6" fill="#1C2128" stroke="#61DAFB" stroke-width="1.5"/><text x="55" y="137" text-anchor="middle" fill="#61DAFB" font-size="11">JS Thread</text>
+            <rect x="70" y="127" width="80" height="23" rx="6" fill="#1B2D1B" stroke="#3FB950" stroke-width="1.5"/><text x="110" y="143" text-anchor="middle" fill="#3FB950" font-size="10">JSI (C++ direct)</text>
+            <rect x="120" y="115" width="90" height="35" rx="6" fill="#1C2128" stroke="#3FB950" stroke-width="1.5"/><text x="165" y="134" text-anchor="middle" fill="#3FB950" font-size="11">Native Thread</text><text x="165" y="145" text-anchor="middle" fill="#3FB950" font-size="9">Fabric + TurboModules</text>
+            <text x="105" y="168" text-anchor="middle" fill="#3FB950" font-size="10">⚡ Synchronous, shared memory, 60fps</text>
+            <rect x="240" y="25" width="185" height="200" rx="10" fill="rgba(88,166,255,.04)" stroke="#58A6FF" stroke-width="1"/>
+            <text x="332" y="44" text-anchor="middle" fill="#58A6FF" font-weight="700" font-size="11">THREAD MODEL</text>
+            <rect x="250" y="52" width="165" height="28" rx="6" fill="#1C2128" stroke="#61DAFB" stroke-width="1"/><text x="332" y="71" text-anchor="middle" fill="#61DAFB" font-size="11">🟡 JS Thread (Hermes)</text>
+            <rect x="250" y="88" width="165" height="28" rx="6" fill="#1C2128" stroke="#E3B341" stroke-width="1"/><text x="332" y="107" text-anchor="middle" fill="#E3B341" font-size="11">🔵 UI Thread (rendering)</text>
+            <rect x="250" y="124" width="165" height="28" rx="6" fill="#1C2128" stroke="#BC8CFF" stroke-width="1"/><text x="332" y="143" text-anchor="middle" fill="#BC8CFF" font-size="11">🟣 Shadow Thread (Yoga)</text>
+            <rect x="250" y="160" width="165" height="28" rx="6" fill="#1C2128" stroke="#3FB950" stroke-width="1"/><text x="332" y="179" text-anchor="middle" fill="#3FB950" font-size="11">🟢 Native Modules Thread</text>
+          </svg>
+        </div>
+      </div>
+      <div class="diagram-card">
+        <h3>🔐 JWT Authentication Flow</h3>
+        <div class="diagram-body">
+          <svg class="diag" viewBox="0 0 440 220" height="220">
+            <defs><marker id="arr6" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#58A6FF"/></marker></defs>
+            <rect x="10" y="10" width="100" height="200" rx="8" fill="rgba(97,218,251,.05)" stroke="#61DAFB" stroke-width="1"/><text x="60" y="30" text-anchor="middle" fill="#61DAFB" font-weight="700" font-size="11">CLIENT</text>
+            <rect x="170" y="10" width="100" height="200" rx="8" fill="rgba(63,185,80,.05)" stroke="#3FB950" stroke-width="1"/><text x="220" y="30" text-anchor="middle" fill="#3FB950" font-weight="700" font-size="11">SERVER</text>
+            <rect x="330" y="10" width="100" height="200" rx="8" fill="rgba(188,140,255,.05)" stroke="#BC8CFF" stroke-width="1"/><text x="380" y="30" text-anchor="middle" fill="#BC8CFF" font-weight="700" font-size="11">DATABASE</text>
+            <line x1="110" y1="60" x2="168" y2="60" stroke="#E3B341" stroke-width="1.5" marker-end="url(#arr6)"/><text x="139" y="54" text-anchor="middle" fill="#E3B341" font-size="9">POST /login</text><text x="139" y="65" text-anchor="middle" fill="#E3B341" font-size="9">email+password</text>
+            <line x1="270" y1="80" x2="328" y2="80" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr6)"/>
+            <line x1="328" y1="95" x2="270" y2="95" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr6)"/>
+            <rect x="178" y="115" width="84" height="22" rx="4" fill="#1C2128" stroke="#3FB950" stroke-width="1"/><text x="220" y="130" text-anchor="middle" fill="#3FB950" font-size="9">jwt.sign(payload, secret)</text>
+            <line x1="168" y1="150" x2="110" y2="150" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arr6)"/><text x="139" y="144" text-anchor="middle" fill="#3FB950" font-size="9">access token</text><text x="139" y="155" text-anchor="middle" fill="#3FB950" font-size="9">(HttpOnly cookie)</text>
+            <line x1="110" y1="180" x2="168" y2="180" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arr6)"/><text x="139" y="174" text-anchor="middle" fill="#58A6FF" font-size="9">GET /api/data</text><text x="139" y="185" text-anchor="middle" fill="#58A6FF" font-size="9">+ Bearer token</text>
+            <rect x="178" y="170" width="84" height="22" rx="4" fill="#1C2128" stroke="#E3B341" stroke-width="1"/><text x="220" y="185" text-anchor="middle" fill="#E3B341" font-size="9">jwt.verify() middleware</text>
+          </svg>
+          <div class="code"><span class="kw">const</span> <span class="fn">authMiddleware</span> = (req, res, next) => {
+  <span class="kw">const</span> token = req.cookies.accessToken;
+  <span class="kw">const</span> decoded = jwt.<span class="fn">verify</span>(token, process.env.<span class="op">JWT_SECRET</span>);
+  req.user = decoded; <span class="fn">next</span>();
+};</div>
+        </div>
+      </div>
+      <div class="diagram-card">
+        <h3>📦 var vs let vs const</h3>
         <div class="diagram-body">
           <table class="cmp-table">
             <tr><th>Feature</th><th style="color:var(--orange)">var</th><th style="color:var(--green)">let</th><th style="color:var(--accent)">const</th></tr>
@@ -322,37 +367,37 @@
             <tr><td>Redeclarable</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
             <tr><td>Use in 2024</td><td class="no">❌ Avoid</td><td class="yes">✅ Yes</td><td class="yes">✅ Prefer</td></tr>
           </table>
+          <div class="code"><span class="cmt">// TDZ — Temporal Dead Zone</span>
+console.<span class="fn">log</span>(x); <span class="cmt">// undefined (var hoisted)</span>
+<span class="kw">var</span> x = <span class="num">5</span>;
+console.<span class="fn">log</span>(y); <span class="cmt">// ❌ ReferenceError (TDZ)</span>
+<span class="kw">let</span> y = <span class="num">5</span>;</div>
         </div>
       </div>
-
-      <!-- 4: REDUX FLOW -->
       <div class="diagram-card">
-        <h3>🏪 Redux / RTK Data Flow</h3>
+        <h3>🍃 MongoDB Aggregation Pipeline</h3>
         <div class="diagram-body">
-          <svg class="diag" viewBox="0 0 440 180" height="180">
-            <defs><marker id="arr4" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#58A6FF"/></marker></defs>
-            <rect x="10" y="65" width="80" height="50" rx="8" fill="#1C2128" stroke="#61DAFB" stroke-width="1.5"/>
-            <text x="50" y="86" text-anchor="middle" fill="#61DAFB" font-weight="700" font-size="11">COMPONENT</text>
-            <text x="50" y="101" text-anchor="middle" fill="#61DAFB" font-size="10">dispatch(action)</text>
-            <rect x="120" y="65" width="80" height="50" rx="8" fill="#1C2128" stroke="#E3B341" stroke-width="1.5"/>
-            <text x="160" y="86" text-anchor="middle" fill="#E3B341" font-weight="700" font-size="11">MIDDLEWARE</text>
-            <text x="160" y="101" text-anchor="middle" fill="#E3B341" font-size="10">thunk / saga</text>
-            <rect x="230" y="65" width="80" height="50" rx="8" fill="#1C2128" stroke="#F78166" stroke-width="1.5"/>
-            <text x="270" y="86" text-anchor="middle" fill="#F78166" font-weight="700" font-size="11">REDUCER</text>
-            <text x="270" y="101" text-anchor="middle" fill="#F78166" font-size="10">(state, action)</text>
-            <rect x="340" y="65" width="90" height="50" rx="8" fill="#1C2128" stroke="#3FB950" stroke-width="1.5"/>
-            <text x="385" y="86" text-anchor="middle" fill="#3FB950" font-weight="700" font-size="11">STORE</text>
-            <text x="385" y="101" text-anchor="middle" fill="#3FB950" font-size="10">new state 🗃️</text>
-            <line x1="90" y1="88" x2="118" y2="88" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arr4)"/>
-            <line x1="200" y1="88" x2="228" y2="88" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arr4)"/>
-            <line x1="310" y1="88" x2="338" y2="88" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arr4)"/>
-            <path d="M 385 115 Q 385 150 200 150 Q 50 150 50 115" fill="none" stroke="#3FB950" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr4)"/>
-            <text x="220" y="167" text-anchor="middle" fill="#3FB950" font-size="10">re-render subscribed components</text>
+          <svg class="diag" viewBox="0 0 440 160" height="160">
+            <defs><marker id="arr8" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#68A063"/></marker></defs>
+            <rect x="5" y="50" width="60" height="60" rx="6" fill="#1C2128" stroke="#8B949E" stroke-width="1.5"/><text x="35" y="75" text-anchor="middle" fill="#8B949E" font-size="10">📄 docs</text><text x="35" y="89" text-anchor="middle" fill="#8B949E" font-size="10">collection</text>
+            <line x1="65" y1="80" x2="80" y2="80" stroke="#68A063" stroke-width="2" marker-end="url(#arr8)"/>
+            <rect x="82" y="40" width="64" height="80" rx="6" fill="#1C2128" stroke="#68A063" stroke-width="1.5"/><text x="114" y="70" text-anchor="middle" fill="#68A063" font-weight="700" font-size="11">$match</text><text x="114" y="85" text-anchor="middle" fill="#68A063" font-size="9">filter docs</text>
+            <line x1="146" y1="80" x2="162" y2="80" stroke="#68A063" stroke-width="2" marker-end="url(#arr8)"/>
+            <rect x="164" y="40" width="64" height="80" rx="6" fill="#1C2128" stroke="#E3B341" stroke-width="1.5"/><text x="196" y="70" text-anchor="middle" fill="#E3B341" font-weight="700" font-size="11">$group</text><text x="196" y="85" text-anchor="middle" fill="#E3B341" font-size="9">aggregate</text>
+            <line x1="228" y1="80" x2="244" y2="80" stroke="#68A063" stroke-width="2" marker-end="url(#arr8)"/>
+            <rect x="246" y="40" width="64" height="80" rx="6" fill="#1C2128" stroke="#BC8CFF" stroke-width="1.5"/><text x="278" y="70" text-anchor="middle" fill="#BC8CFF" font-weight="700" font-size="11">$sort</text><text x="278" y="85" text-anchor="middle" fill="#BC8CFF" font-size="9">order results</text>
+            <line x1="310" y1="80" x2="326" y2="80" stroke="#68A063" stroke-width="2" marker-end="url(#arr8)"/>
+            <rect x="328" y="40" width="64" height="80" rx="6" fill="#1C2128" stroke="#F78166" stroke-width="1.5"/><text x="360" y="70" text-anchor="middle" fill="#F78166" font-weight="700" font-size="11">$project</text><text x="360" y="85" text-anchor="middle" fill="#F78166" font-size="9">shape output</text>
+            <text x="220" y="140" text-anchor="middle" fill="#8B949E" font-size="10">Each stage transforms documents — output of one feeds next</text>
           </svg>
+          <div class="code">Order.<span class="fn">aggregate</span>([
+  { <span class="op">$match</span>: { status: <span class="str">'completed'</span> } },
+  { <span class="op">$group</span>: { _id: <span class="str">'$userId'</span>, total: { <span class="op">$sum</span>: <span class="str">'$amount'</span> } } },
+  { <span class="op">$sort</span>: { total: <span class="op">-1</span> } },
+  { <span class="op">$limit</span>: <span class="num">10</span> }
+])</div>
         </div>
       </div>
-
-      <!-- 5: Hooks quick ref -->
       <div class="diagram-card">
         <h3>🪝 React Hooks Quick Reference</h3>
         <div class="diagram-body">
@@ -370,54 +415,38 @@
           </table>
         </div>
       </div>
-
-      <!-- 6: JWT Auth Flow -->
       <div class="diagram-card">
-        <h3>🔐 JWT Authentication Flow</h3>
+        <h3>📜 FlatList vs ScrollView — Virtualization</h3>
         <div class="diagram-body">
-          <svg class="diag" viewBox="0 0 440 220" height="220">
-            <defs><marker id="arr6" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#58A6FF"/></marker></defs>
-            <rect x="10" y="10" width="100" height="200" rx="8" fill="rgba(97,218,251,.05)" stroke="#61DAFB" stroke-width="1"/>
-            <text x="60" y="30" text-anchor="middle" fill="#61DAFB" font-weight="700" font-size="11">CLIENT</text>
-            <rect x="170" y="10" width="100" height="200" rx="8" fill="rgba(63,185,80,.05)" stroke="#3FB950" stroke-width="1"/>
-            <text x="220" y="30" text-anchor="middle" fill="#3FB950" font-weight="700" font-size="11">SERVER</text>
-            <rect x="330" y="10" width="100" height="200" rx="8" fill="rgba(188,140,255,.05)" stroke="#BC8CFF" stroke-width="1"/>
-            <text x="380" y="30" text-anchor="middle" fill="#BC8CFF" font-weight="700" font-size="11">DATABASE</text>
-            <line x1="110" y1="60" x2="168" y2="60" stroke="#E3B341" stroke-width="1.5" marker-end="url(#arr6)"/>
-            <text x="139" y="54" text-anchor="middle" fill="#E3B341" font-size="9">POST /login</text>
-            <text x="139" y="65" text-anchor="middle" fill="#E3B341" font-size="9">email+password</text>
-            <line x1="270" y1="80" x2="328" y2="80" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr6)"/>
-            <line x1="328" y1="95" x2="270" y2="95" stroke="#BC8CFF" stroke-width="1.5" marker-end="url(#arr6)"/>
-            <rect x="178" y="115" width="84" height="22" rx="4" fill="#1C2128" stroke="#3FB950" stroke-width="1"/>
-            <text x="220" y="130" text-anchor="middle" fill="#3FB950" font-size="9">jwt.sign(payload, secret)</text>
-            <line x1="168" y1="150" x2="110" y2="150" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arr6)"/>
-            <text x="139" y="144" text-anchor="middle" fill="#3FB950" font-size="9">access token</text>
-            <text x="139" y="155" text-anchor="middle" fill="#3FB950" font-size="9">(HttpOnly cookie)</text>
-            <line x1="110" y1="180" x2="168" y2="180" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arr6)"/>
-            <text x="139" y="174" text-anchor="middle" fill="#58A6FF" font-size="9">GET /api/data</text>
-            <text x="139" y="185" text-anchor="middle" fill="#58A6FF" font-size="9">+ Bearer token</text>
-            <rect x="178" y="170" width="84" height="22" rx="4" fill="#1C2128" stroke="#E3B341" stroke-width="1"/>
-            <text x="220" y="185" text-anchor="middle" fill="#E3B341" font-size="9">jwt.verify() middleware</text>
+          <svg class="diag" viewBox="0 0 440 180" height="180">
+            <rect x="10" y="10" width="190" height="160" rx="8" fill="rgba(247,129,102,.05)" stroke="#F78166" stroke-width="1.5"/>
+            <text x="105" y="30" text-anchor="middle" fill="#F78166" font-weight="700" font-size="11">ScrollView ❌</text>
+            <text x="105" y="44" text-anchor="middle" fill="#8B949E" font-size="9">ALL items rendered in memory</text>
+            <rect x="20" y="52" width="170" height="20" rx="4" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/><text x="105" y="66" text-anchor="middle" fill="#F78166" font-size="10">Item 1 (mounted)</text>
+            <rect x="20" y="76" width="170" height="20" rx="4" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/><text x="105" y="90" text-anchor="middle" fill="#F78166" font-size="10">Item 2 (mounted)</text>
+            <rect x="20" y="100" width="170" height="20" rx="4" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/><text x="105" y="114" text-anchor="middle" fill="#F78166" font-size="10">Item 3 (mounted) ← not visible</text>
+            <rect x="20" y="124" width="170" height="20" rx="4" fill="#2D1B1B" stroke="#F78166" stroke-width="1"/><text x="105" y="138" text-anchor="middle" fill="#F78166" font-size="10">Item 4 (mounted) ← not visible</text>
+            <text x="105" y="162" text-anchor="middle" fill="#F78166" font-size="9">⚠️ 1000 items = 1000 mounted</text>
+            <rect x="240" y="10" width="190" height="160" rx="8" fill="rgba(63,185,80,.05)" stroke="#3FB950" stroke-width="1.5"/>
+            <text x="335" y="30" text-anchor="middle" fill="#3FB950" font-weight="700" font-size="11">FlatList ✅</text>
+            <text x="335" y="44" text-anchor="middle" fill="#8B949E" font-size="9">Only visible + buffer rendered</text>
+            <rect x="250" y="52" width="170" height="20" rx="4" fill="#1B2D1B" stroke="#3FB950" stroke-width="1"/><text x="335" y="66" text-anchor="middle" fill="#3FB950" font-size="10">Item 1 (visible ✓)</text>
+            <rect x="250" y="76" width="170" height="20" rx="4" fill="#1B2D1B" stroke="#3FB950" stroke-width="1"/><text x="335" y="90" text-anchor="middle" fill="#3FB950" font-size="10">Item 2 (visible ✓)</text>
+            <rect x="250" y="100" width="170" height="20" rx="4" fill="#1C2128" stroke="#30363D" stroke-width="1"/><text x="335" y="114" text-anchor="middle" fill="#8B949E" font-size="10">Item 3 (recycled ♻️)</text>
+            <rect x="250" y="124" width="170" height="20" rx="4" fill="#1C2128" stroke="#30363D" stroke-width="1"/><text x="335" y="138" text-anchor="middle" fill="#8B949E" font-size="10">Item 4 (recycled ♻️)</text>
+            <text x="335" y="162" text-anchor="middle" fill="#3FB950" font-size="9">✅ 1000 items = ~10 mounted</text>
           </svg>
         </div>
       </div>
-
     </div>
   </div>
-
 </div>
-
 <script>
-const DATA = {"JavaScript Core":[{"id":1,"q":"What is the difference between var, let, and const?","a":"var is function-scoped and hoisted as undefined. let and const are block-scoped. const cannot be reassigned after declaration, let can. I always prefer const by default and use let only when reassignment is needed. I avoid var completely in modern code due to hoisting bugs it can cause.","tags":"scope, hoisting, TDZ, ES6"},{"id":2,"q":"Explain closures with an example.","a":"A closure is when a function remembers variables from its outer scope even after that outer function finishes executing. Example: a counter function — the inner function keeps access to count even after makeCounter returns. In React/RN closures appear everywhere — event handlers capture state variables from the component render scope.","tags":"lexical scope, memory, factory functions"},{"id":3,"q":"What is event delegation?","a":"Event delegation attaches one listener on a parent instead of many on each child. When a child fires an event it bubbles up. I use e.target to identify which child triggered it. Great for dynamic lists — no need to re-attach listeners when new items are added.","tags":"bubbling, e.target, performance"},{"id":4,"q":"What is the difference between == and ===?","a":"== does type coercion before comparing — '5' == 5 is true. === is strict equality — no coercion, both value AND type must match. I always use === to avoid unexpected coercion bugs. Only exception: checking null/undefined with == null checks both in one.","tags":"type coercion, strict equality"},{"id":5,"q":"What are Promises and how do they work?","a":"A Promise represents a future value with three states: pending, fulfilled, rejected. Create with new Promise((resolve,reject)=>{}). Chain .then() for success and .catch() for errors. Promises solve callback hell. I use async/await on top for cleaner code.","tags":"async, pending/fulfilled/rejected, chaining"},{"id":6,"q":"What is async/await and how does it relate to Promises?","a":"async/await is syntactic sugar over Promises. An async function returns a Promise automatically. await pauses execution until the Promise resolves. Error handling uses try/catch. Under the hood it's identical to .then() chains — just more readable.","tags":"syntactic sugar, try/catch, event loop"},{"id":7,"q":"Explain the JavaScript event loop.","a":"JavaScript is single-threaded. The event loop allows non-blocking operations. Call stack runs sync code. Microtask queue (Promises) is drained first after each task. Callback queue handles setTimeout/setInterval. Loop: if stack empty, drain microtasks, then take one macro-task. That's why Promise callbacks run before setTimeout.","tags":"call stack, microtask, macro task, single-threaded"},{"id":8,"q":"What is hoisting?","a":"Hoisting moves declarations to the top of their scope before execution. var declarations are hoisted as undefined. Function declarations are fully hoisted — callable before they appear. let/const are hoisted but not initialized (Temporal Dead Zone) — accessing them early throws a ReferenceError.","tags":"TDZ, var vs let, function declarations"},{"id":9,"q":"What is the difference between null and undefined?","a":"undefined: variable declared but no value assigned — set by JS automatically. null: intentional absence of value — you assign it explicitly. typeof null is 'object' (a historical bug). I use undefined for missing values and null when I want to explicitly clear something.","tags":"typeof, intentional vs unintentional"},{"id":10,"q":"What are higher-order functions?","a":"Higher-order functions either accept functions as arguments or return functions. Array methods map, filter, reduce are classic examples. debounce and throttle return functions. In React, HOCs follow the same concept. Key to functional programming and code reuse.","tags":"map/filter/reduce, HOC, functional programming"},{"id":11,"q":"Explain prototypal inheritance.","a":"Every JS object has a hidden __proto__ link to its prototype. When accessing a property, JS walks up the prototype chain until found or hits null. ES6 class syntax is syntactic sugar over this.","tags":"__proto__, prototype chain, ES6 class"},{"id":12,"q":"What is the spread operator and rest parameter?","a":"Spread (...) expands an iterable — merge arrays, spread into function args, clone objects. Rest (...) collects remaining arguments into an array. In React I use spread for props: <Comp {...props} />. In reducers for immutable updates: {...state, count: state.count+1}.","tags":"shallow copy, immutability, destructuring"},{"id":13,"q":"What is destructuring?","a":"Destructuring unpacks values from arrays or objects into variables. Object: const {name,age}=user. Array: const [first]=arr. Used everywhere in React — useState returns an array we destructure, props are destructured in parameters.","tags":"array/object destructuring, default values, aliasing"},{"id":14,"q":"What are template literals?","a":"Template literals use backticks and allow embedded expressions with ${}. Support multi-line strings natively. I use them for string interpolation, dynamic class names, SQL/GraphQL queries.","tags":"backticks, interpolation, tagged templates"},{"id":15,"q":"What is the difference between synchronous and asynchronous code?","a":"Sync code runs line by line, blocking until each line finishes. Async code starts an operation and moves on, handling results via callbacks/promises/async-await. Since JS is single-threaded, all network requests and timers must be async so they don't freeze the UI.","tags":"blocking, non-blocking, event loop"},{"id":16,"q":"What is a pure function?","a":"A pure function always returns the same output for the same input and has no side effects — no external mutations, no API calls. React components and Redux reducers must be pure.","tags":"side effects, deterministic, immutability"},{"id":17,"q":"What is memoization?","a":"Memoization caches function results based on inputs. Same arguments = return cached result instead of recalculating. In React, useMemo caches values, useCallback caches functions. Only use when there's a real performance problem.","tags":"caching, useMemo, useCallback, performance"},{"id":18,"q":"What is the difference between map, filter, and reduce?","a":"map transforms each element, returns same-length array. filter returns elements passing a condition. reduce accumulates into a single value. I use map for rendering lists in React, filter for search, reduce for totals.","tags":"array methods, immutability, functional programming"},{"id":19,"q":"What is a generator function?","a":"Generator functions use function* and can pause/resume with yield. Returns an iterator — .next() runs until next yield. Redux-Saga is built entirely on generators for async flow control.","tags":"yield, iterator, lazy evaluation, redux-saga"},{"id":20,"q":"What is the difference between call, apply, and bind?","a":"All three set the 'this' context. call invokes immediately, args one by one. apply invokes immediately with args array. bind returns new function with this bound, doesn't invoke.","tags":"this keyword, context, execution"},{"id":21,"q":"What are arrow functions?","a":"Arrow functions have shorter syntax and inherit 'this' from their lexical scope — no own 'this'. No arguments object, no prototype. In React class components, arrow functions as methods avoid constructor binding.","tags":"lexical this, no prototype, concise syntax"},{"id":22,"q":"What is event bubbling and capturing?","a":"Events first go down from root to target (capturing), then bubble back up. Default listeners run in bubbling phase. e.stopPropagation() prevents bubbling. React uses a synthetic event system attached at root.","tags":"DOM events, stopPropagation, synthetic events"},{"id":23,"q":"What is the difference between deep copy and shallow copy?","a":"Shallow copy copies top-level properties — nested objects still share references. Spread operator and Object.assign are shallow. Deep copy: JSON.parse(JSON.stringify(obj)) for simple cases, lodash cloneDeep for complex. Critical in React — never mutate state directly.","tags":"reference types, immutability, JSON, lodash"},{"id":24,"q":"What is optional chaining (?.) and nullish coalescing (??)? ","a":"Optional chaining safely accesses nested properties: user?.address?.city returns undefined instead of crashing. Nullish coalescing ?? returns right side only if left is null/undefined — unlike || which also triggers for 0 or empty string.","tags":"ES2020, null safety, falsy vs nullish"},{"id":25,"q":"What is Promise.all vs Promise.allSettled?","a":"Promise.all resolves when ALL resolve or rejects immediately if ANY rejects — fail-fast. Promise.allSettled waits for ALL to settle and returns results with status 'fulfilled' or 'rejected'. Use all() when any failure should abort, allSettled() when handling each independently.","tags":"parallel, fail-fast, settled, Promise.race"},{"id":26,"q":"What is localStorage vs sessionStorage vs cookies?","a":"localStorage: no expiry, survives restarts. sessionStorage: cleared when tab closes. Cookies: sent with every HTTP request, server-accessible, can be HttpOnly. For auth I prefer HttpOnly cookies — not accessible to JS, safe from XSS. In React Native: use AsyncStorage or SecureStore.","tags":"persistence, XSS, HttpOnly, AsyncStorage"},{"id":27,"q":"What is XSS and how do you prevent it?","a":"Cross-site scripting: attacker injects malicious scripts viewed by others. Prevention: React JSX auto-escapes values — dangerouslySetInnerHTML is the escape hatch. Use textContent not innerHTML. Set Content Security Policy headers.","tags":"security, injection, CSP, dangerouslySetInnerHTML"},{"id":28,"q":"What is the typeof operator?","a":"typeof returns: 'string','number','boolean','object','undefined','function','symbol','bigint'. Gotchas: typeof null is 'object' (a bug), typeof array is 'object'. To check arrays use Array.isArray().","tags":"type checking, null bug, Array.isArray"},{"id":29,"q":"What is a Set and Map in JavaScript?","a":"Set is a collection of unique values. Map is like an object but keys can be any type and maintains insertion order. I use Set to deduplicate arrays: [...new Set(arr)]. Map when I need non-string keys.","tags":"unique values, key types, iterable, performance"},{"id":30,"q":"What is short-circuit evaluation?","a":"In &&, if left is falsy right side is never evaluated. In ||, if left is truthy right is skipped. In JSX: {isLoggedIn && <Dashboard/>}. {value || 'default'} provides fallbacks.","tags":"&&, ||, ??, JSX patterns"}],"React JS":[{"id":1,"q":"What is the Virtual DOM and how does React use it?","a":"The Virtual DOM is a lightweight JS representation of the real DOM. When state changes, React creates a new vDOM tree, diffs it against the previous one (reconciliation), and only updates the real DOM nodes that changed. This batching and minimal update strategy is much faster than re-rendering the entire DOM.","tags":"reconciliation, diffing, fiber, batching"},{"id":2,"q":"What is JSX?","a":"JSX is a syntax extension that looks like HTML but compiles to React.createElement() calls via Babel. Not required but much more readable. Rules: use className, htmlFor, and every expression must have a single root (or Fragment).","tags":"Babel, createElement, transpilation"},{"id":3,"q":"What are React Fragments?","a":"Fragments return multiple elements without adding extra DOM nodes. Use <React.Fragment> or the short syntax <>...</>. Useful for table rows or any case where a wrapper div would break HTML structure.","tags":"DOM structure, key prop on fragments"},{"id":4,"q":"What is the difference between controlled and uncontrolled components?","a":"Controlled: form data managed by React state — input value is always state, onChange updates state. Uncontrolled: manages own internal state via refs. I prefer controlled because React is single source of truth.","tags":"single source of truth, ref, form handling"},{"id":5,"q":"What is useState and how does it work?","a":"useState adds state to functional components. Returns [value, setter]. Calling setter schedules a re-render. State updates are batched and async. For updates based on previous state use functional form: setState(prev=>prev+1).","tags":"functional updater, batching, re-render, immutability"},{"id":6,"q":"What is useEffect and when does it run?","a":"useEffect runs after render. Empty array []: only on mount. With deps [count]: on mount and when count changes. Return value is cleanup — runs before next effect and on unmount. Common mistake: missing dependencies causing stale closures.","tags":"cleanup, dependency array, componentDidMount, stale closure"},{"id":7,"q":"What is useRef?","a":"useRef returns a mutable object with .current. Doesn't trigger re-renders when changed. Two uses: reference DOM elements for focus/scroll, and store mutable values that persist across renders without re-rendering.","tags":"mutable, no re-render, DOM access, previous value"},{"id":8,"q":"What is useContext?","a":"useContext reads the nearest Context.Provider value. Replaces Consumer render props. I use it for theme, language, authenticated user. Every component using context re-renders when context value changes.","tags":"context API, prop drilling, Provider, Consumer"},{"id":9,"q":"What is useReducer?","a":"useReducer is an alternative to useState for complex state. Define reducer: (state,action)=>newState, similar to Redux. Better when state has complex sub-values. I use it for forms with many fields.","tags":"reducer pattern, dispatch, action, complex state"},{"id":10,"q":"What is useCallback?","a":"useCallback memoizes a function — returns same reference unless deps change. Prevents unnecessary child re-renders when function is passed as prop. Always pair with React.memo.","tags":"memoization, referential equality, React.memo, performance"},{"id":11,"q":"What is useMemo?","a":"useMemo memoizes a computed value — recalculates only when deps change. Use for expensive computations like sorting/filtering large arrays. Don't overuse — profile first.","tags":"expensive computation, dependency array, performance"},{"id":12,"q":"What is React.memo?","a":"React.memo is an HOC that wraps functional components to memoize them. If props haven't changed (shallow comparison), React skips re-render. Works best paired with useCallback for function props.","tags":"HOC, shallow comparison, performance, prop equality"},{"id":13,"q":"What are React portals?","a":"Portals render children outside the parent DOM hierarchy while keeping them in the React tree. ReactDOM.createPortal(child, domNode). Classic use: modals, tooltips, dropdowns needing to escape overflow:hidden.","tags":"modal, DOM hierarchy, createPortal, event bubbling"},{"id":14,"q":"What is lazy loading and Suspense?","a":"React.lazy() dynamically imports a component — loads the bundle only when first rendered. Suspense shows a fallback while loading. This is code-splitting — reduces initial bundle size.","tags":"code splitting, dynamic import, bundle size, Suspense fallback"},{"id":15,"q":"What is Redux Toolkit?","a":"RTK is the official modern Redux. createSlice generates actions and reducers together. configureStore sets up store. createAsyncThunk handles async actions. Uses Immer — write 'mutating' code in reducers, Immer handles immutability.","tags":"createSlice, createAsyncThunk, Immer, configureStore"},{"id":16,"q":"What is the difference between props and state?","a":"Props are inputs from parent — immutable inside the component. State is internal data that can change. When either changes React re-renders. Props flow down, events bubble up.","tags":"unidirectional data flow, immutable props, lifting state"},{"id":17,"q":"What are custom hooks?","a":"Custom hooks are functions starting with 'use' that can call other hooks. They extract and reuse component logic without creating components. Examples: useFetch, useLocalStorage, useDebounce. Cleaner than HOCs for most cases.","tags":"reusability, abstraction, composition, naming convention"},{"id":18,"q":"What is the key prop and why is it important?","a":"key helps React identify which list items changed/added/removed during reconciliation. Keys must be stable unique IDs — not array indices, because reordering causes React to reuse components with wrong data.","tags":"reconciliation, list rendering, stability, index anti-pattern"},{"id":19,"q":"What is React Router?","a":"React Router intercepts navigation, updates URL via History API, renders matching components — no server request. I use BrowserRouter, define routes with Route, access dynamic params with useParams. Nested routes use Outlet.","tags":"History API, BrowserRouter, useParams, Outlet"},{"id":20,"q":"What is React Query (TanStack Query)?","a":"React Query handles caching, background refetching, synchronization, and pagination. useQuery fetches and caches by query key. useMutation handles modifications. Eliminates useEffect+useState boilerplate for every API call.","tags":"caching, stale-while-revalidate, useQuery, useMutation"},{"id":21,"q":"What are error boundaries?","a":"Class components that catch JS errors in child trees, show fallback UI, prevent app crash. Use componentDidCatch and getDerivedStateFromError. Don't catch errors in event handlers or async code.","tags":"componentDidCatch, fallback UI, error isolation, class component"},{"id":22,"q":"What is React Fiber?","a":"Fiber is React's internal engine rewritten for React 16. Breaks rendering into units (fibers) that can be paused, prioritized, resumed. Enables concurrent mode, Suspense, and time slicing.","tags":"concurrent mode, priority, incremental rendering"},{"id":23,"q":"What is React 18's concurrent rendering?","a":"Concurrent rendering lets React prepare multiple UI versions simultaneously. Key features: automatic batching everywhere, startTransition for non-urgent updates, useDeferredValue for deferring expensive renders.","tags":"startTransition, useDeferredValue, batching, Suspense"},{"id":24,"q":"What is the difference between useLayoutEffect and useEffect?","a":"Both run after render. useLayoutEffect runs synchronously before browser paint — useful to measure DOM or prevent visual flicker. useEffect runs asynchronously after paint — better for most cases.","tags":"paint timing, DOM measurement, flicker, synchronous"},{"id":25,"q":"What is the forwardRef API?","a":"forwardRef lets a parent access a DOM element inside a child component via a ref. Wrap child with React.forwardRef((props,ref)=>) and attach ref to DOM element. I use it for reusable form components.","tags":"ref forwarding, DOM access, UI libraries"}],"React Native":[{"id":1,"q":"What is React Native and how is it different from React?","a":"React Native builds native mobile apps with JavaScript and React. Instead of rendering to DOM, it renders to native platform components — View maps to UIView on iOS and android.view on Android. Same React component model and hooks, but components and APIs are platform-specific.","tags":"native rendering, bridge, JSI, cross-platform"},{"id":2,"q":"What is the New Architecture (JSI, Fabric, TurboModules)?","a":"JSI lets JS directly reference and call native objects synchronously — no serialization. Fabric is the new rendering engine built on JSI. TurboModules are lazy-loaded native modules — load on demand instead of all at startup, improving startup time.","tags":"JSI, Fabric, TurboModules, synchronous, lazy loading"},{"id":3,"q":"What is FlatList and why is it better than ScrollView?","a":"FlatList only renders currently visible items plus a buffer — virtualization. Off-screen items are recycled as you scroll. Required props: data and renderItem. Essential for any list with 50+ items.","tags":"virtualization, renderItem, keyExtractor, windowSize"},{"id":4,"q":"How does flexbox work in React Native?","a":"RN uses flexbox but with different defaults. flexDirection defaults to 'column' (not row like web). flex:1 means take all available space. Every element is a flex container by default.","tags":"flexDirection, column default, flex:1, alignItems"},{"id":5,"q":"What is React Navigation?","a":"React Navigation is the standard navigation library. Provides Stack, Tab, and Drawer navigators. Navigate programmatically with useNavigation hook. Pass params: navigate('Screen',{id:123}).","tags":"Stack, Tab, Drawer, nested navigation, useNavigation"},{"id":6,"q":"What are Animated and Reanimated?","a":"Built-in Animated drives native values but logic runs on JS thread. React Native Reanimated 2+ runs animation code on the UI thread via worklets. This guarantees 60fps regardless of JS thread load.","tags":"worklets, UI thread, 60fps, jank"},{"id":7,"q":"What is AsyncStorage?","a":"AsyncStorage is persistent async key-value storage. For non-sensitive data like preferences. For sensitive data (auth tokens) use react-native-keychain or Expo SecureStore. Never store tokens in AsyncStorage.","tags":"persistent, key-value, Keychain, SecureStore"},{"id":8,"q":"What is Expo?","a":"Expo is a framework on top of RN: managed workflow has pre-configured native code, OTA updates, and a large SDK. Bare workflow is raw RN with full native code control.","tags":"managed workflow, bare workflow, EAS, config plugins"},{"id":9,"q":"What is Hermes?","a":"Hermes is Meta's JS engine for RN, optimized for startup time and memory on mobile. Pre-compiles JS to bytecode ahead of time — reduces parse time on device. Default engine for both iOS and Android.","tags":"bytecode, startup time, AOT compilation, default engine"},{"id":10,"q":"What is SafeAreaView?","a":"SafeAreaView renders content within the safe area — avoiding iPhone notch, Dynamic Island, rounded corners on iOS, status bar on Android. react-native-safe-area-context provides useSafeAreaInsets for fine-grained control.","tags":"notch, Dynamic Island, insets, useSafeAreaInsets"},{"id":11,"q":"What is the difference between TouchableOpacity and Pressable?","a":"TouchableOpacity decreases opacity on press. Pressable is the modern flexible replacement — gives fine-grained control with onPressIn, onPressOut, onLongPress. I use Pressable for all new code.","tags":"touch feedback, Pressable, accessibility, press events"},{"id":12,"q":"How do you handle push notifications?","a":"Use Firebase Cloud Messaging (FCM) via @react-native-firebase/messaging. App registers for permissions, gets device token, sends to backend, backend sends through FCM. For Expo: expo-notifications wraps this.","tags":"FCM, APNs, device token, notification handling"},{"id":13,"q":"How do you test React Native apps?","a":"Unit tests with Jest for pure logic. Component tests with React Native Testing Library. E2E with Detox — controls actual device, performs taps/swipes. I write unit tests for business logic, RNTL for component behaviour, Detox for critical flows.","tags":"Jest, RNTL, Detox, E2E, unit tests"},{"id":14,"q":"What is MMKV?","a":"MMKV from WeChat via react-native-mmkv. It's synchronous — no await needed. 10x+ faster than AsyncStorage. Synchronous reads are great for values checked on every render like auth tokens or settings.","tags":"synchronous, performance, key-value, benchmarks"},{"id":15,"q":"What is the InteractionManager?","a":"InteractionManager.runAfterInteractions(() => { heavyWork() }) schedules work to run after all animations and interactions finish. Prevents heavy computation from causing jank during navigation transitions.","tags":"deferred work, animation, jank, navigation transitions"}],"Node + Express + MongoDB":[{"id":1,"q":"What is Node.js and why use it for backend?","a":"Node.js is a JavaScript runtime built on V8 enabling server-side JS. Key feature: non-blocking I/O — network, file, DB operations don't block; they use callbacks/promises. Excellent for I/O-heavy REST APIs.","tags":"V8, non-blocking I/O, event loop, npm"},{"id":2,"q":"What is middleware in Express?","a":"Middleware are functions with (req,res,next) signature running in sequence during the request lifecycle. Can modify req/res, end the request, or call next(). ORDER MATTERS.","tags":"next(), pipeline, order, error middleware"},{"id":3,"q":"How do you handle errors in Express?","a":"Create centralized error middleware with 4 params (err,req,res,next) registered LAST with app.use. In routes, pass errors with next(err). Use express-async-errors to catch async errors without try/catch in every route.","tags":"centralized error handler, AppError, express-async-errors, 4-param"},{"id":4,"q":"What is MongoDB and when to use it?","a":"MongoDB is a NoSQL document database — BSON documents in collections, flexible schema. Good for flexible/evolving data, hierarchical data. Choose SQL (PostgreSQL) for strong relational data with joins.","tags":"NoSQL, document, BSON, schema-less, when to use"},{"id":5,"q":"What is Mongoose?","a":"Mongoose is an ODM for MongoDB providing schemas, models, validation, middleware (pre/post hooks), virtuals, and rich query API. I always use Mongoose for structure, validation, and hooks.","tags":"ODM, schema, model, validation, hooks"},{"id":6,"q":"How do you implement JWT authentication in Express?","a":"User logs in → server verifies → jwt.sign({userId,role},secret,{expiresIn:'7d'}) → client stores token in HttpOnly cookie → auth middleware on subsequent requests decodes with jwt.verify() → attaches user to req.user.","tags":"jwt.sign, jwt.verify, middleware, refresh tokens, HttpOnly"},{"id":7,"q":"What is bcrypt?","a":"bcrypt is a deliberately slow hashing function with a cost factor making brute-force expensive. Hash: bcrypt.hash(password,10). Verify: bcrypt.compare(input,storedHash). Never store plain or MD5/SHA1 passwords.","tags":"hashing, salt, cost factor, rainbow tables, bcrypt.compare"},{"id":8,"q":"What is CORS?","a":"CORS is a browser security mechanism blocking cross-origin requests. The cors package handles it in Express. Configure: cors({origin:['https://myapp.com'],credentials:true}). Production: whitelist specific domains.","tags":"Same-origin policy, preflight, origins, credentials"},{"id":9,"q":"What are MongoDB aggregation pipelines?","a":"Pipeline processes documents through stages: $match (filter), $group (group+compute), $sort, $project (shape output), $lookup (join), $unwind (flatten arrays). More powerful than multiple queries for analytics.","tags":"$match, $group, $lookup, $project, $unwind"},{"id":10,"q":"What is Redis?","a":"Redis is in-memory store — extremely fast. Use cases: caching, session storage, rate limiting, pub/sub, real-time leaderboards, job queues (BullMQ). Cache pattern: check Redis first, miss → fetch from MongoDB → store with TTL.","tags":"caching, TTL, session, pub/sub, BullMQ, cache invalidation"},{"id":11,"q":"What is the N+1 problem?","a":"N+1: fetch list of N items, then N more queries for related data. Solutions: $lookup in aggregation (one query), DataLoader in GraphQL (batching). Always check query counts when something feels slow.","tags":"population, $lookup, DataLoader, batching, query optimization"},{"id":12,"q":"How do you structure a large Express application?","a":"Layered architecture: routes (HTTP layer) → controllers (req/res handling) → services (business logic) → models/repositories (data access). Keep controllers thin. Services contain business rules, framework-agnostic, testable.","tags":"MVC, service layer, controller, separation of concerns"},{"id":13,"q":"What is PM2?","a":"PM2 is a process manager: keeps app running by restarting on crash, cluster mode for all CPU cores, logging, monitoring, zero-downtime reloads. pm2 start app.js --instances max for cluster mode.","tags":"process manager, clustering, auto-restart, zero-downtime"},{"id":14,"q":"How do you implement refresh tokens?","a":"Access tokens: short-lived (15 min). Refresh tokens: long-lived (7-30 days) in HttpOnly cookies. On access token expiry, client calls /auth/refresh, server verifies refresh token in DB, issues new access token. Refresh token rotation — each use invalidates old.","tags":"rotation, HttpOnly, revocation, short-lived, security"},{"id":15,"q":"What is the helmet middleware?","a":"helmet sets HTTP security headers: X-Frame-Options (clickjacking), X-XSS-Protection, Content-Security-Policy, Strict-Transport-Security. Just app.use(helmet()) adds 15+ security headers. Must-have for production.","tags":"security headers, CSP, XSS, clickjacking, HTTPS"}]};
+const DATA = {"JavaScript Core":[{"id":1,"q":"What is the difference between var, let, and const?","a":"var is function-scoped and hoisted as undefined. let and const are block-scoped. const cannot be reassigned after declaration, let can. I always prefer const by default and use let only when reassignment is needed. I avoid var completely in modern code due to hoisting bugs it can cause.","tags":"scope, hoisting, TDZ, ES6"},{"id":2,"q":"Explain closures with an example.","a":"A closure is when a function remembers variables from its outer scope even after that outer function finishes executing. Example: a counter function — the inner function keeps access to count even after makeCounter returns. In React/RN closures appear everywhere — event handlers capture state variables from the component render scope.","tags":"lexical scope, memory, factory functions"},{"id":3,"q":"What is event delegation?","a":"Event delegation attaches one listener on a parent instead of many on each child. When a child fires an event it bubbles up. I use e.target to identify which child triggered it. Great for dynamic lists — no need to re-attach listeners when new items are added.","tags":"bubbling, e.target, performance"},{"id":4,"q":"What is the difference between == and ===?","a":"== does type coercion before comparing — '5' == 5 is true. === is strict equality — no coercion, both value AND type must match. I always use === to avoid unexpected coercion bugs. Only exception: checking null/undefined with == null checks both in one.","tags":"type coercion, strict equality"},{"id":5,"q":"What are Promises and how do they work?","a":"A Promise represents a future value with three states: pending, fulfilled, rejected. Create with new Promise((resolve,reject)=>{}). Chain .then() for success and .catch() for errors. Promises solve callback hell. I use async/await on top for cleaner code.","tags":"async, pending/fulfilled/rejected, chaining"},{"id":6,"q":"What is async/await and how does it relate to Promises?","a":"async/await is syntactic sugar over Promises. An async function returns a Promise automatically. await pauses execution until the Promise resolves. Error handling uses try/catch. Under the hood it's identical to .then() chains — just more readable.","tags":"syntactic sugar, try/catch, event loop"},{"id":7,"q":"Explain the JavaScript event loop.","a":"JavaScript is single-threaded. The event loop allows non-blocking operations. Call stack runs sync code. Microtask queue (Promises) is drained first after each task. Callback queue handles setTimeout/setInterval. Loop: if stack empty, drain microtasks, then take one macro-task. That's why Promise callbacks run before setTimeout.","tags":"call stack, microtask, macro task, single-threaded"},{"id":8,"q":"What is hoisting?","a":"Hoisting moves declarations to the top of their scope before execution. var declarations are hoisted as undefined. Function declarations are fully hoisted — callable before they appear. let/const are hoisted but not initialized (Temporal Dead Zone) — accessing them early throws a ReferenceError.","tags":"TDZ, var vs let, function declarations"},{"id":9,"q":"What is the difference between null and undefined?","a":"undefined: variable declared but no value assigned — set by JS automatically. null: intentional absence of value — you assign it explicitly. typeof null is 'object' (a historical bug). I use undefined for missing values and null when I want to explicitly clear something.","tags":"typeof, intentional vs unintentional"},{"id":10,"q":"What are higher-order functions?","a":"Higher-order functions either accept functions as arguments or return functions. Array methods map, filter, reduce are classic examples. debounce and throttle return functions. In React, HOCs follow the same concept. Key to functional programming and code reuse.","tags":"map/filter/reduce, HOC, functional programming"},{"id":11,"q":"Explain prototypal inheritance.","a":"Every JS object has a hidden __proto__ link to its prototype. When accessing a property, JS walks up the prototype chain until found or hits null. ES6 class syntax is syntactic sugar over this. Understanding it helps debug why array methods are available on all arrays.","tags":"__proto__, prototype chain, ES6 class"},{"id":12,"q":"What is the spread operator and rest parameter?","a":"Spread (...) expands an iterable — merge arrays, spread into function args, clone objects. Rest (...) collects remaining arguments into an array. In React I use spread for props: <Comp {...props} />. In reducers for immutable updates: {...state, count: state.count+1}.","tags":"shallow copy, immutability, destructuring"},{"id":13,"q":"What is destructuring?","a":"Destructuring unpacks values from arrays or objects into variables. Object: const {name,age}=user. Array: const [first]=arr. Used everywhere in React — useState returns an array we destructure, props are destructured in parameters. Makes code cleaner.","tags":"array/object destructuring, default values, aliasing"},{"id":14,"q":"What are template literals?","a":"Template literals use backticks and allow embedded expressions with ${}. Support multi-line strings natively. I use them for string interpolation, dynamic class names, SQL/GraphQL queries. styled-components uses tagged template literals heavily.","tags":"backticks, interpolation, tagged templates"},{"id":15,"q":"What is the difference between synchronous and asynchronous code?","a":"Sync code runs line by line, blocking until each line finishes. Async code starts an operation and moves on, handling results via callbacks/promises/async-await. Since JS is single-threaded, all network requests and timers must be async so they don't freeze the UI.","tags":"blocking, non-blocking, event loop"},{"id":16,"q":"What is a pure function?","a":"A pure function always returns the same output for the same input and has no side effects — no external mutations, no API calls. React components and Redux reducers must be pure. Pure functions are predictable, testable, and easy to reason about.","tags":"side effects, deterministic, immutability"},{"id":17,"q":"What is memoization?","a":"Memoization caches function results based on inputs. Same arguments = return cached result instead of recalculating. In React, useMemo caches values, useCallback caches functions. Only use when there's a real performance problem — premature optimization is costly.","tags":"caching, useMemo, useCallback, performance"},{"id":18,"q":"What is the difference between map, filter, and reduce?","a":"map transforms each element, returns same-length array. filter returns elements passing a condition. reduce accumulates into a single value. I use map for rendering lists in React, filter for search, reduce for totals or building objects from arrays.","tags":"array methods, immutability, functional programming"},{"id":19,"q":"What is a generator function?","a":"Generator functions use function* and can pause/resume with yield. Returns an iterator — .next() runs until next yield. Useful for lazy evaluation. Redux-Saga is built entirely on generators for async flow control.","tags":"yield, iterator, lazy evaluation, redux-saga"},{"id":20,"q":"What is the difference between call, apply, and bind?","a":"All three set the 'this' context. call invokes immediately, args one by one: fn.call(ctx,a,b). apply invokes immediately with args array: fn.apply(ctx,[a,b]). bind returns new function with this bound, doesn't invoke. Arrow functions in class fields solve this more cleanly today.","tags":"this keyword, context, execution"},{"id":21,"q":"What are arrow functions and how do they differ from regular functions?","a":"Arrow functions have shorter syntax and inherit 'this' from their lexical scope — no own 'this'. No arguments object, no prototype. In React class components, arrow functions as methods avoid constructor binding. Don't use arrow functions as object methods when you need 'this' to refer to the object.","tags":"lexical this, no prototype, concise syntax"},{"id":22,"q":"What is event bubbling and capturing?","a":"Events first go down from root to target (capturing), then bubble back up. Default listeners run in bubbling phase. e.stopPropagation() prevents bubbling. React uses a synthetic event system attached at root that leverages bubbling.","tags":"DOM events, stopPropagation, synthetic events"},{"id":23,"q":"What is the difference between deep copy and shallow copy?","a":"Shallow copy copies top-level properties — nested objects still share references. Spread operator and Object.assign are shallow. Deep copy creates independent copies of all nested objects: JSON.parse(JSON.stringify(obj)) for simple cases, lodash cloneDeep for complex. Critical in React — never mutate state directly.","tags":"reference types, immutability, JSON, lodash"},{"id":24,"q":"What is optional chaining (?.) and nullish coalescing (??)?","a":"Optional chaining safely accesses nested properties without throwing on null/undefined: user?.address?.city returns undefined instead of crashing. Nullish coalescing ?? returns right side only if left is null/undefined — unlike || which also triggers for 0 or empty string. I use both constantly for API responses.","tags":"ES2020, null safety, falsy vs nullish"},{"id":25,"q":"What is a WeakMap and WeakSet?","a":"WeakMap and WeakSet hold weak references — they don't prevent garbage collection. WeakMap keys must be objects. Useful for storing metadata about objects without memory leaks. Can't iterate them. Used in advanced caching and library internals.","tags":"garbage collection, memory leaks, weak references"},{"id":26,"q":"What is the typeof operator?","a":"typeof returns a string indicating the type: 'string','number','boolean','object','undefined','function','symbol','bigint'. Gotchas: typeof null is 'object' (a bug), typeof array is 'object'. To check arrays use Array.isArray(). To check null use value===null explicitly.","tags":"type checking, null bug, Array.isArray"},{"id":27,"q":"What are Symbols in JavaScript?","a":"Symbol creates a unique, immutable primitive value. Every Symbol() call is unique even with the same description. Used as unique object property keys to avoid naming collisions, and as well-known symbols like Symbol.iterator. Used in library code to define protocols.","tags":"unique, immutable, Symbol.iterator, well-known symbols"},{"id":28,"q":"What is the difference between for...in and for...of?","a":"for...in iterates enumerable property keys of an object including inherited ones. for...of iterates iterable values — array elements, string characters, Map entries. I use for...of for arrays/collections and for...in only when I specifically need object keys.","tags":"enumerable, iterable, prototype chain"},{"id":29,"q":"What is a Set and Map in JavaScript?","a":"Set is a collection of unique values — duplicates ignored. Map is like an object but keys can be any type and maintains insertion order. I use Set to deduplicate arrays: [...new Set(arr)]. Map when I need non-string keys or track frequency.","tags":"unique values, key types, iterable, performance"},{"id":30,"q":"What is the difference between function declaration and function expression?","a":"Function declarations are fully hoisted — callable before they appear in code. Function expressions assign a function to a variable — only partially hoisted with var (undefined), TDZ with let/const. Arrow functions are always expressions.","tags":"hoisting, named vs anonymous, IIFE"},{"id":31,"q":"What is an IIFE?","a":"IIFE (Immediately Invoked Function Expression) is a function that runs immediately: (function(){...})(). Used before ES modules to create private scope and avoid polluting globals. Today with block scope and ES modules IIFEs are less common but appear in legacy code.","tags":"scope isolation, module pattern, legacy"},{"id":32,"q":"What is the arguments object?","a":"arguments is an array-like object inside regular functions containing all passed arguments. Not available in arrow functions. I prefer rest parameters (...args) which give a real array. But important to know for reading legacy code.","tags":"array-like, rest params, legacy code"},{"id":33,"q":"Explain try/catch/finally.","a":"try runs code that might throw. catch handles the error — error object has message and stack. finally runs regardless — useful for cleanup like closing connections. In async/await I wrap await calls in try/catch. If you throw in catch, finally still runs.","tags":"error handling, error object, cleanup"},{"id":34,"q":"What is currying?","a":"Currying transforms a multi-argument function into a chain of single-argument functions: add(1)(2)(3). Enables partial application — fix some arguments and get back a function for the rest. Used in Ramda, lodash/fp. Creates specialized utility functions.","tags":"partial application, function composition, FP"},{"id":35,"q":"What is function composition?","a":"Function composition chains functions so output of one becomes input of next. compose(f,g)(x) equals f(g(x)). Libraries provide compose/pipe. Redux uses compose internally. Core functional programming pattern for declarative, reusable code.","tags":"pipe, compose, declarative, FP"},{"id":36,"q":"What is the difference between primitive and reference types?","a":"Primitives (string, number, boolean, null, undefined, symbol, bigint) are stored by value — assignment gives a copy. Reference types (objects, arrays, functions) are stored by reference — assignment copies the pointer. Critical for understanding React immutability patterns.","tags":"stack vs heap, value vs reference, immutability"},{"id":37,"q":"What is Object.freeze()?","a":"Object.freeze makes an object immutable — can't add, remove, or change properties. It's shallow — nested objects can still be mutated. I use it for constants. Redux teams use it in development to catch mutations. For deep immutability use Immer.","tags":"immutability, shallow freeze, const vs freeze"},{"id":38,"q":"What is the Proxy object?","a":"Proxy intercepts operations on an object with traps: get, set, has, etc. Vue 3's reactivity system is built on Proxy. I've used it for validation — intercepting property sets to validate types, and for creating observable objects.","tags":"traps, interceptor, Vue reactivity, meta-programming"},{"id":39,"q":"What is Object.keys, Object.values, Object.entries?","a":"Object.keys: array of own enumerable property names. Object.values: array of values. Object.entries: [key,value] pairs. None include inherited properties. I use Object.entries a lot: for (const [key,val] of Object.entries(obj)).","tags":"enumerable, own properties, iteration"},{"id":40,"q":"What is short-circuit evaluation?","a":"In &&, if left is falsy right side is never evaluated. In ||, if left is truthy right is skipped. In JSX: {isLoggedIn && <Dashboard/>} — Dashboard only renders if isLoggedIn is truthy. {value || 'default'} provides fallbacks.","tags":"&&, ||, ??, JSX patterns"},{"id":41,"q":"What is the difference between Array.splice and Array.slice?","a":"slice returns new array from start to end index — non-destructive. splice modifies in place — removes or adds elements, returns removed. In React I avoid splice on state. Instead: [...arr.slice(0,i), newItem, ...arr.slice(i+1)] creates new array immutably.","tags":"mutating vs non-mutating, immutability, state"},{"id":42,"q":"What is Promise.all vs Promise.allSettled?","a":"Promise.all resolves when ALL resolve or rejects immediately if ANY rejects — fail-fast. Promise.allSettled waits for ALL to settle and returns results array with status 'fulfilled' or 'rejected'. I use all() when any failure should abort, allSettled() when I need to handle each result independently.","tags":"parallel, fail-fast, settled, Promise.race"},{"id":43,"q":"What is the difference between localStorage, sessionStorage, and cookies?","a":"localStorage: no expiry, survives restarts. sessionStorage: cleared when tab closes. Cookies: sent with every HTTP request, server-accessible, can be HttpOnly. For auth I prefer HttpOnly cookies — not accessible to JS, safe from XSS. In React Native: no localStorage — use AsyncStorage or SecureStore.","tags":"persistence, XSS, HttpOnly, AsyncStorage"},{"id":44,"q":"What is XSS and how do you prevent it?","a":"Cross-site scripting: attacker injects malicious scripts viewed by others. Prevention: React JSX auto-escapes values — dangerouslySetInnerHTML is the escape hatch to use carefully. Use textContent not innerHTML. Set Content Security Policy headers. Sanitize on server side.","tags":"security, injection, CSP, dangerouslySetInnerHTML"},{"id":45,"q":"What is the difference between synchronous and asynchronous iteration?","a":"Regular for...of is synchronous. for await...of works with async iterables — objects implementing Symbol.asyncIterator. Useful for streaming data like reading file chunks or paginated API responses lazily. Important for Node.js backend work.","tags":"Symbol.asyncIterator, streams, async generators"},{"id":46,"q":"What is tail call optimization?","a":"TCO allows reusing the current stack frame when the last thing a function does is call another function — prevents stack overflow in deep recursion. ES6 specced it but only Safari implements it. In Node.js for deep recursion I use iteration or trampolining instead.","tags":"recursion, stack overflow, ES6 spec"},{"id":47,"q":"What is Array.from?","a":"Array.from converts iterables and array-like objects to real arrays. Accepts a map function as second argument: Array.from({length:5},(_,i)=>i) creates [0,1,2,3,4]. Works on NodeList and arguments which spread might not handle. I use it when I need the map transform in one step.","tags":"iterable, array-like, NodeList, mapping"},{"id":48,"q":"What is the globalThis object?","a":"globalThis is the standardized global object across environments. window in browsers, global in Node.js, self in Workers. globalThis works in all. Useful for isomorphic code. React Native also has a global object.","tags":"cross-environment, window, global, isomorphic"},{"id":49,"q":"What is a tagged template literal?","a":"A tagged template literal lets a function process a template literal. The tag receives string parts and interpolated values as arguments. styled-components uses this: css`color: ${color}` — the css tag processes the template to create styles.","tags":"styled-components, DSL, string processing"},{"id":50,"q":"What are WeakRef and FinalizationRegistry?","a":"WeakRef holds a weak reference to an object — if nothing else references it, it can be garbage collected and WeakRef.deref() returns undefined. FinalizationRegistry lets you run a callback when an object is garbage collected. Both are advanced memory management tools rarely used in application code but important for library authors.","tags":"garbage collection, memory management, deref"}],"React JS":[{"id":1,"q":"What is the Virtual DOM and how does React use it?","a":"The Virtual DOM is a lightweight JS representation of the real DOM. When state changes, React creates a new vDOM tree, diffs it against the previous one (reconciliation), and only updates the real DOM nodes that changed. This batching and minimal update strategy is much faster than re-rendering the entire DOM.","tags":"reconciliation, diffing, fiber, batching"},{"id":2,"q":"What is JSX?","a":"JSX is a syntax extension that looks like HTML but compiles to React.createElement() calls via Babel. Not required but much more readable. Rules: use className, htmlFor, and every expression must have a single root (or Fragment). Expressions embedded with {}.","tags":"Babel, createElement, transpilation"},{"id":3,"q":"What are React Fragments?","a":"Fragments return multiple elements without adding extra DOM nodes. Use <React.Fragment> or the short syntax <>...</>. Useful for table rows or any case where a wrapper div would break HTML structure. Short syntax supports key prop on Fragment for lists.","tags":"DOM structure, key prop on fragments"},{"id":4,"q":"What is the difference between controlled and uncontrolled components?","a":"Controlled: form data managed by React state — input value is always state, onChange updates state. Uncontrolled: manages own internal state, read values via refs. I prefer controlled because React is single source of truth, making validation easier.","tags":"single source of truth, ref, form handling"},{"id":5,"q":"What is useState and how does it work?","a":"useState adds state to functional components. Returns [value, setter]. Calling setter schedules a re-render. State updates are batched and async — you won't see new value immediately. For updates based on previous state use functional form: setState(prev=>prev+1).","tags":"functional updater, batching, re-render, immutability"},{"id":6,"q":"What is useEffect and when does it run?","a":"useEffect runs after render. Empty array []: only on mount. With deps [count]: on mount and when count changes. Return value is cleanup — runs before next effect and on unmount. Used for API calls, subscriptions, DOM mutations. Common mistake: missing dependencies causing stale closures.","tags":"cleanup, dependency array, componentDidMount, stale closure"},{"id":7,"q":"What is useRef?","a":"useRef returns a mutable object with .current. Doesn't trigger re-renders when changed. Two uses: reference DOM elements for focus/scroll, and store mutable values that persist across renders without re-rendering — like timer IDs or previous prop values.","tags":"mutable, no re-render, DOM access, previous value"},{"id":8,"q":"What is useContext?","a":"useContext reads the nearest Context.Provider value. Replaces Consumer render props. I use it for theme, language, authenticated user. Important: every component using context re-renders when context value changes — keep context granular.","tags":"context API, prop drilling, Provider, Consumer"},{"id":9,"q":"What is useReducer?","a":"useReducer is an alternative to useState for complex state. Define reducer: (state,action)=>newState, similar to Redux. Better when state has complex sub-values or next state depends on previous in complex ways. I use it for forms with many fields.","tags":"reducer pattern, dispatch, action, complex state"},{"id":10,"q":"What is useCallback?","a":"useCallback memoizes a function — returns same reference unless deps change. Prevents unnecessary child re-renders when function is passed as prop since new function on every render breaks React.memo's equality check. Always pair with React.memo — one without the other is usually pointless.","tags":"memoization, referential equality, React.memo, performance"},{"id":11,"q":"What is useMemo?","a":"useMemo memoizes a computed value — recalculates only when deps change. Use for expensive computations like sorting/filtering large arrays. Don't overuse — memoization has overhead. Profile first, optimize second.","tags":"expensive computation, dependency array, performance"},{"id":12,"q":"What is React.memo?","a":"React.memo is an HOC that wraps functional components to memoize them. If props haven't changed (shallow comparison), React skips re-render. Pass second arg for custom comparison. Works best paired with useCallback for function props.","tags":"HOC, shallow comparison, performance, prop equality"},{"id":13,"q":"What is the difference between useMemo and useCallback?","a":"useMemo memoizes a value — result of a function. useCallback memoizes the function itself. useCallback(fn,deps) is equivalent to useMemo(()=>fn,deps). Use useMemo to avoid recomputing a value, useCallback to avoid recreating a function to pass to memoized children.","tags":"memoization distinction, referential equality"},{"id":14,"q":"What are React portals?","a":"Portals render children outside the parent DOM hierarchy while keeping them in the React tree. ReactDOM.createPortal(child, domNode). Classic use: modals, tooltips, dropdowns needing to escape overflow:hidden. Events still bubble through the React component tree.","tags":"modal, DOM hierarchy, createPortal, event bubbling"},{"id":15,"q":"What is lazy loading and Suspense in React?","a":"React.lazy() dynamically imports a component — loads the bundle only when first rendered. Suspense shows a fallback while loading. This is code-splitting — load components on demand, reducing initial bundle size. I use it for large page components.","tags":"code splitting, dynamic import, bundle size, Suspense fallback"},{"id":16,"q":"What is the Context API and when would you use it vs Redux?","a":"Context is built-in, perfect for simple global state: theme, locale, user info. Redux is better when: state logic is complex, need middleware (thunk/saga), need time-travel debugging, or many components read same state with performance concerns. I choose Context for simple cases, Redux for complex apps.","tags":"global state, prop drilling, Redux tradeoffs, middleware"},{"id":17,"q":"What is Redux and how does it work?","a":"Redux is state management with a single immutable store. Flow: component dispatches action → middleware → reducer returns new state → connected components re-render. Three principles: single source of truth, read-only state, pure function reducers. Redux Toolkit modernizes it with less boilerplate.","tags":"store, action, reducer, middleware, RTK"},{"id":18,"q":"What is Redux Toolkit?","a":"RTK is the official modern Redux. createSlice generates actions and reducers together. configureStore sets up store with good defaults. createAsyncThunk handles async actions. Uses Immer — write 'mutating' code in reducers, Immer handles immutability. Dramatically reduces Redux boilerplate.","tags":"createSlice, createAsyncThunk, Immer, configureStore"},{"id":19,"q":"What is the difference between props and state?","a":"Props are inputs from parent — immutable inside the component. State is internal data that can change. When either changes React re-renders. Props flow down, events bubble up. Common pattern: parent holds state, passes to children as props with a callback to update.","tags":"unidirectional data flow, immutable props, lifting state"},{"id":20,"q":"What is lifting state up?","a":"Moving shared state to the closest common ancestor of components that need it. Instead of each component managing independent state, the parent holds it and passes down as props. Keeps a single source of truth. I use this whenever two sibling components need the same data.","tags":"common ancestor, single source of truth, controlled components"},{"id":21,"q":"What are custom hooks and why do you create them?","a":"Custom hooks are functions starting with 'use' that can call other hooks. They extract and reuse component logic without creating components. Examples: useFetch, useLocalStorage, useDebounce, useWindowSize. Cleaner than HOCs or render props for most cases.","tags":"reusability, abstraction, composition, naming convention"},{"id":22,"q":"What is the difference between class and functional components?","a":"Class components use lifecycle methods, this.state, render(). Functional components are simpler functions with hooks. I prefer functional: less boilerplate, easier to test, better with hooks. Class components appear in legacy codebases.","tags":"lifecycle methods, hooks replacement, legacy"},{"id":23,"q":"What are React lifecycle methods?","a":"Mounting: constructor→render→componentDidMount. Updating: render→componentDidUpdate. Unmounting: componentWillUnmount. Hook equivalents: useEffect([]) = componentDidMount, useEffect([deps]) = componentDidUpdate, useEffect cleanup = componentWillUnmount.","tags":"mount/update/unmount, useEffect equivalents"},{"id":24,"q":"What is code splitting?","a":"Breaking the bundle into smaller chunks loaded on demand. React.lazy + Suspense for component splitting. Route-based splitting with React Router is most common — each route loads its chunk when navigated to. Reduces initial load time.","tags":"bundle size, dynamic import, webpack, route-based"},{"id":25,"q":"What is SSR and how does it differ from CSR?","a":"CSR: minimal HTML + JS bundle sent, browser runs JS to render. SSR: full HTML rendered on server, browser shows content immediately then hydrates. SSR improves FCP and SEO. Next.js is the main SSR framework. Tradeoff: higher server load.","tags":"hydration, FCP, SEO, Next.js, TTFB"},{"id":26,"q":"What is hydration in React?","a":"Hydration is React taking over server-rendered HTML — attaching event listeners without re-rendering from scratch. If server HTML doesn't match client render, you get a hydration mismatch error. React 18's selective hydration lets high-priority parts hydrate first.","tags":"SSR, React 18, mismatch, event binding"},{"id":27,"q":"What are error boundaries?","a":"Class components that catch JS errors in child trees, show fallback UI, prevent app crash. Use componentDidCatch and getDerivedStateFromError. Don't catch errors in event handlers (use try/catch), async code, or SSR. I wrap major app sections with error boundaries.","tags":"componentDidCatch, fallback UI, error isolation, class component"},{"id":28,"q":"What is reconciliation in React?","a":"React's algorithm for diffing previous and new vDOM to find minimal DOM updates. Rules: different element types produce different trees; use key prop for list items. React Fiber is the current engine — can pause and resume work, enabling concurrent features.","tags":"diffing, Fiber, key prop, virtual DOM"},{"id":29,"q":"What is React Fiber?","a":"Fiber is React's internal engine rewritten for React 16. Breaks rendering into units (fibers) that can be paused, prioritized, resumed. Enables concurrent mode, Suspense, and time slicing. Before Fiber, reconciliation was synchronous and could block the main thread.","tags":"concurrent mode, priority, incremental rendering"},{"id":30,"q":"What is React 18's concurrent rendering?","a":"Concurrent rendering lets React prepare multiple UI versions simultaneously. Key features: automatic batching everywhere, startTransition for non-urgent updates, useDeferredValue for deferring expensive renders. I use startTransition for search filtering to keep input responsive while list updates.","tags":"startTransition, useDeferredValue, batching, Suspense"},{"id":31,"q":"What is the key prop and why is it important?","a":"key helps React identify which list items changed/added/removed during reconciliation. Keys must be stable unique IDs — not array indices, because reordering causes React to reuse components with wrong data, causing bugs like input values in wrong items.","tags":"reconciliation, list rendering, stability, index anti-pattern"},{"id":32,"q":"What is prop drilling and how do you solve it?","a":"Prop drilling: passing props through multiple layers that don't use them, just to reach a deeply nested component. Solutions: Context API for global-ish data, component composition passing components as children, Redux/Zustand. I first try restructuring before reaching for Context.","tags":"Context API, composition, state management"},{"id":33,"q":"What are render props?","a":"A component receives a function as prop and calls it to render, passing its data: <DataProvider render={data=><Chart data={data}/>}. Shares behaviour without HOCs. Custom hooks mostly replaced this pattern. Still seen in older libraries.","tags":"code sharing, children as function, HOC alternative"},{"id":34,"q":"What is a Higher-Order Component (HOC)?","a":"A HOC takes a component and returns an enhanced component. Adds reusable behaviour — auth checks, analytics, data fetching. Examples: Redux connect(), withRouter. Pattern: const EnhancedComponent = withFeature(WrappedComponent). Custom hooks are generally preferred now.","tags":"composition, reusability, connect(), wrapper hell"},{"id":35,"q":"What is React Router and how does client-side routing work?","a":"React Router intercepts navigation, updates URL via History API, renders matching components — no server request. I use BrowserRouter, define routes with Route, access dynamic params with useParams hook. Nested routes use Outlet. Protected routes wrap private routes with auth checks.","tags":"History API, BrowserRouter, useParams, Outlet"},{"id":36,"q":"What is the useNavigate hook?","a":"useNavigate returns a navigate function for programmatic navigation. navigate('/dashboard') pushes to history. navigate(-1) goes back. navigate('/login',{replace:true}) replaces current entry. Replaced the older useHistory hook in React Router v6.","tags":"programmatic navigation, history, v6 API"},{"id":37,"q":"What is React Query (TanStack Query)?","a":"React Query handles caching, background refetching, synchronization, and pagination. useQuery fetches and caches by query key. useMutation handles modifications. Eliminates useEffect+useState boilerplate for every API call. Auto-retries, keeps data fresh. Major upgrade over manual fetching.","tags":"caching, stale-while-revalidate, useQuery, useMutation"},{"id":38,"q":"What is Zustand?","a":"Zustand is a minimal state management library. Create a store with create(). Define state and actions together. Components subscribe only to the parts they use — preventing unnecessary re-renders. No boilerplate. I use it for medium-complexity apps where Context is too basic but Redux is overkill.","tags":"create, minimal boilerplate, selector, lightweight"},{"id":39,"q":"What are synthetic events in React?","a":"React wraps native events in SyntheticEvent — a cross-browser wrapper normalizing event properties. In React 17+, events attach to root container not document. The synthetic event pooling from older React was removed in React 17.","tags":"cross-browser, event pooling, React 17 changes"},{"id":40,"q":"What is StrictMode?","a":"React.StrictMode is a development tool detecting potential problems. Renders components twice in development to detect side effects. Warns about deprecated APIs. React 18 double-invokes effects to detect missing cleanup. No effect on production. I wrap the app in StrictMode during development.","tags":"development mode, double render, side effect detection"},{"id":41,"q":"What is the difference between useLayoutEffect and useEffect?","a":"Both run after render. useLayoutEffect runs synchronously before browser paint — useful to measure DOM or prevent visual flicker. useEffect runs asynchronously after paint — better for most cases since it doesn't block painting. Use useLayoutEffect only for DOM measurements or synchronous mutations.","tags":"paint timing, DOM measurement, flicker, synchronous"},{"id":42,"q":"What is React's batching behaviour in React 18?","a":"React 17: batching only in event handlers. React 18: automatic batching everywhere — including setTimeout, Promises, and native events. Major performance improvement reducing unnecessary renders. Use flushSync to force immediate re-renders when needed.","tags":"React 18, flushSync, performance, re-renders"},{"id":43,"q":"What is the forwardRef API?","a":"forwardRef lets a parent access a DOM element inside a child component via a ref. Wrap child with React.forwardRef((props,ref)=>...) and attach ref to DOM element. I use it for reusable form components or UI library components exposing focus/scroll methods.","tags":"ref forwarding, DOM access, UI libraries"},{"id":44,"q":"What is useImperativeHandle?","a":"useImperativeHandle customizes what parent sees when using a ref on a child. Instead of exposing entire DOM node, expose selective API: {focus, scrollIntoView}. Paired with forwardRef. Maintains encapsulation while enabling imperative control.","tags":"forwardRef, encapsulation, imperative API"},{"id":45,"q":"What is the children prop?","a":"The children prop is content between a component's opening and closing tags. Render with {props.children}. Children can be strings, elements, arrays, or functions. React.Children utilities for mapping, counting, validating. I use for flexible layout components: modals, cards, wrappers.","tags":"composition, render props, React.Children, slots"},{"id":46,"q":"What is prop-types vs TypeScript?","a":"prop-types: runtime type-checking in development, warns when wrong prop types passed. TypeScript: static type-checking at build time — catches errors before runtime with IDE support. TypeScript is strictly better for larger projects. I define component props as interfaces for autocomplete and type safety.","tags":"type safety, TypeScript interfaces, static vs runtime"},{"id":47,"q":"What is the difference between defaultProps and default parameter values?","a":"defaultProps is React's property for default prop values. For functional components, ES6 default parameters in the function signature are cleaner: function Component({title='Default'}{}). defaultProps is still used for class components. For new code I use default parameters.","tags":"default values, propTypes, functional component"},{"id":48,"q":"What is React's StrictMode double-invocation of effects?","a":"In React 18 StrictMode, effects are mounted, unmounted, and remounted. This helps detect missing cleanup functions. If your effect causes issues on remount, it means your cleanup is incomplete. This makes it easier to catch bugs where cleanup wasn't properly implemented before the component unmounts.","tags":"cleanup, React 18, StrictMode, unmount"},{"id":49,"q":"What is the difference between imperative and declarative programming in React?","a":"Imperative: tell HOW — manually manipulate DOM step by step. Declarative: describe WHAT — React figures out how to update DOM. React is declarative: describe desired UI for given state, React handles mechanics. Makes code easier to reason about — focus on outcome not implementation.","tags":"mental model, DOM manipulation, state-driven UI"}],"React Native":[{"id":1,"q":"What is React Native and how is it different from React?","a":"React Native builds native mobile apps with JavaScript and React. Instead of rendering to DOM, it renders to native platform components — View maps to UIView on iOS and android.view on Android. Same React component model and hooks, but components (View, Text, Image) and APIs are platform-specific, not web.","tags":"native rendering, bridge, JSI, cross-platform"},{"id":2,"q":"What is the React Native bridge (old architecture)?","a":"The old bridge is an async JSON serialization layer between JS thread and native threads. JS calls native modules through serialized JSON messages. Problems: asynchronous, high latency, can't share memory. This caused jank for animations and gestures needing synchronous communication. The new architecture solves this.","tags":"async bridge, JSON serialization, JS thread, native thread"},{"id":3,"q":"What is the New Architecture (JSI, Fabric, TurboModules)?","a":"JSI lets JS directly reference and call native objects synchronously — no serialization. Fabric is the new rendering engine built on JSI — enables synchronous layout measurements. TurboModules are lazy-loaded native modules — load on demand instead of all at startup, improving startup time dramatically.","tags":"JSI, Fabric, TurboModules, synchronous, lazy loading"},{"id":4,"q":"What is the difference between View and ScrollView?","a":"View is a non-scrollable container — like a div. ScrollView renders ALL children at once and makes them scrollable. Great for small content but bad for large lists since everything mounts regardless of visibility. For large lists use FlatList or SectionList which virtualize content.","tags":"virtualization, layout, container"},{"id":5,"q":"What is FlatList and why is it better than ScrollView for large lists?","a":"FlatList only renders currently visible items plus a buffer — virtualization. Off-screen items are recycled as you scroll. Required props: data and renderItem. keyExtractor provides stable keys. Props like initialNumToRender, maxToRenderPerBatch, windowSize tune performance. Essential for any list with 50+ items.","tags":"virtualization, renderItem, keyExtractor, windowSize"},{"id":6,"q":"What is SectionList?","a":"SectionList is like FlatList but supports grouped sections with headers. Pass sections as [{title, data}] array, renderItem for items, renderSectionHeader for headers. Also virtualized. I use it for contacts grouped alphabetically or settings screens with category groups.","tags":"sections, headers, grouped data, virtualization"},{"id":7,"q":"What is the difference between StyleSheet.create and inline styles?","a":"StyleSheet.create validates styles at dev time and sends them as IDs to the native layer — potentially better performance as style objects are sent once. Inline styles create new objects on every render. In practice the difference is small but StyleSheet.create is the convention and provides style validation.","tags":"performance, validation, native layer, style IDs"},{"id":8,"q":"How does flexbox work in React Native?","a":"RN uses flexbox but with different defaults. flexDirection defaults to 'column' (not row like web). flex:1 means take all available space. alignItems and justifyContent work same as web CSS. No display:grid. Every element is a flex container by default. Think: CSS flexbox in column-first mode.","tags":"flexDirection, column default, flex:1, alignItems"},{"id":9,"q":"What is the Dimensions API vs useWindowDimensions?","a":"Dimensions.get('window') returns screen width/height. Doesn't update on orientation change. useWindowDimensions hook re-renders the component when dimensions change — the preferred approach for responsive layouts. I always use useWindowDimensions in components, Dimensions only in utility functions.","tags":"responsive layout, useWindowDimensions, orientation"},{"id":10,"q":"What is the Platform API?","a":"Platform.OS returns 'ios' or 'android'. Platform.select provides platform-specific values: Platform.select({ios:'San Francisco',android:'Roboto'}). For platform-specific files RN auto-picks Component.ios.js or Component.android.js. I use this for shadows — elevation on Android, box-shadow on iOS.","tags":"Platform.OS, Platform.select, file extensions, elevation"},{"id":11,"q":"What is AsyncStorage?","a":"AsyncStorage is persistent async key-value storage — now @react-native-async-storage/async-storage. For non-sensitive data like preferences. For sensitive data (auth tokens) use react-native-keychain or Expo SecureStore which use the device's secure enclave. Never store tokens in AsyncStorage.","tags":"persistent, key-value, Keychain, SecureStore"},{"id":12,"q":"What is React Navigation?","a":"React Navigation is the standard navigation library. Provides Stack (push/pop), Tab (bottom tabs), and Drawer navigators. Navigate programmatically with useNavigation hook. Pass params: navigate('Screen',{id:123}). Read with route.params. Nested navigators for auth/unauth flows.","tags":"Stack, Tab, Drawer, nested navigation, useNavigation"},{"id":13,"q":"What is the difference between Stack and Native Stack Navigator?","a":"Stack navigator is JS-based — more customizable. Native Stack uses UINavigationController (iOS) and Fragment (Android) — authentic native transitions and better performance. I prefer Native Stack for production apps as transitions look exactly like native. JS Stack when I need heavy customization.","tags":"native primitives, transitions, performance, customization"},{"id":14,"q":"How do you handle deep linking in React Native?","a":"Configure linking prop on NavigationContainer mapping URL paths to screen names. iOS: configure URL schemes or Universal Links in Info.plist. Android: intent filters in AndroidManifest.xml. Linking API handles opening and responding to URLs. Test with adb on Android and xcrun on iOS.","tags":"URL scheme, Universal Links, intent filter, linking config"},{"id":15,"q":"What are Native Modules and when do you need them?","a":"Native modules let you call Swift/Kotlin code from JavaScript when RN doesn't provide the API — Bluetooth, low-level camera, custom SDKs. Extend ReactContextBaseJavaModule on Android or implement RCTBridgeModule on iOS. With new architecture done via TurboModules.","tags":"bridge, TurboModules, Swift, Kotlin, native APIs"},{"id":16,"q":"What is Expo and how does it differ from bare React Native?","a":"Expo is a framework on top of RN: managed workflow has pre-configured native code, OTA updates, and a large SDK. Bare workflow is raw RN with full native code control. I use Expo managed for quick projects, bare or Expo with config plugins for complex native integrations.","tags":"managed workflow, bare workflow, EAS, config plugins"},{"id":17,"q":"What is EAS (Expo Application Services)?","a":"EAS Build compiles native binaries in the cloud — no need for Xcode/Android Studio locally. EAS Update delivers OTA JavaScript updates without app store review. EAS Submit automates app store submission. Great for teams without Mac machines for iOS builds.","tags":"OTA updates, cloud build, app store, EAS Build"},{"id":18,"q":"What are Animated and Reanimated?","a":"Built-in Animated drives native values but logic runs on JS thread — can jank if thread is busy. React Native Reanimated 2+ runs animation code on the UI thread via worklets (small JS compiled to run natively). This guarantees 60fps regardless of JS thread load. I use Reanimated for all production animations.","tags":"worklets, UI thread, 60fps, jank"},{"id":19,"q":"What is useSharedValue and useAnimatedStyle in Reanimated?","a":"useSharedValue creates a value shared between JS and UI threads — changing it updates the native layer directly without the bridge. useAnimatedStyle creates styles derived from shared values using a worklet on the UI thread. withTiming creates time-based, withSpring creates physics-based animations.","tags":"Reanimated 2, worklets, UI thread, withTiming, withSpring"},{"id":20,"q":"What is the Gesture Handler library?","a":"react-native-gesture-handler replaces the built-in touch system with native gesture recognizers — handled on native thread, not through JS bridge. Eliminates jank for swipe, pan, pinch, tap. Required for Reanimated gestures. I always use Gesture Handler and Reanimated together.","tags":"native gestures, pan, swipe, pinch, RNGH"},{"id":21,"q":"What is the difference between TouchableOpacity and Pressable?","a":"TouchableOpacity decreases opacity on press. Pressable is the modern flexible replacement — gives fine-grained control with onPressIn, onPressOut, onLongPress, and style callback receiving pressed state. I use Pressable for all new code as it replaces all Touchable variants.","tags":"touch feedback, Pressable, accessibility, press events"},{"id":22,"q":"How do you handle keyboard behaviour in React Native?","a":"KeyboardAvoidingView adjusts height/padding when keyboard appears — behavior='padding' on iOS, behavior='height' on Android. react-native-keyboard-controller provides more accurate keyboard insets using native APIs. Always test keyboard behaviour on both platforms.","tags":"KeyboardAvoidingView, keyboard insets, iOS vs Android"},{"id":23,"q":"What is SafeAreaView?","a":"SafeAreaView renders content within the safe area — avoiding iPhone notch, Dynamic Island, rounded corners on iOS, status bar on Android. react-native-safe-area-context provides useSafeAreaInsets for fine-grained control. I wrap app layout with SafeAreaProvider and use useSafeAreaInsets in screens.","tags":"notch, Dynamic Island, insets, useSafeAreaInsets"},{"id":24,"q":"What is the Metro bundler?","a":"Metro is RN's JavaScript bundler — transforms and bundles JS code for the device. Fast incremental builds, watches for changes, serves bundle during development. Configure via metro.config.js for aliasing, custom extensions, or asset handling.","tags":"bundler, HMR, metro.config.js, transforms"},{"id":25,"q":"What is Fast Refresh?","a":"Fast Refresh hot-reloads code changes almost instantly without losing component state. Edit a component — only that component re-renders, state preserved. Edit a utility file — all files using it refresh. Replaced older Hot Reloading. Works with hooks — useState state survives Fast Refresh.","tags":"HMR, state preservation, development experience"},{"id":26,"q":"How do you implement push notifications?","a":"Use Firebase Cloud Messaging (FCM) via @react-native-firebase/messaging. App registers for permissions, gets device token, sends to backend, backend sends through FCM. Handle foreground messages, background messages, and notification press to navigate to correct screen. For Expo: expo-notifications wraps this.","tags":"FCM, APNs, device token, notification handling"},{"id":27,"q":"How do you handle permissions in React Native?","a":"react-native-permissions provides unified API for camera, microphone, location, notification permissions on iOS and Android. Check status with check(), request if not granted. On iOS add usage descriptions to Info.plist. On Android add to AndroidManifest. Request at the moment needed, not at startup.","tags":"react-native-permissions, Info.plist, AndroidManifest, UX"},{"id":28,"q":"What is the image picker and camera in React Native?","a":"react-native-image-picker or expo-image-picker for gallery/camera selection. react-native-vision-camera for custom camera UI, QR scanning, video — runs on native camera pipeline. Handle permissions before accessing camera or gallery.","tags":"CameraRoll, vision-camera, permissions, media selection"},{"id":29,"q":"How do you make API calls in React Native?","a":"RN includes Fetch API globally. Axios for interceptors and auto JSON parsing. I wrap API calls with React Query (TanStack) for caching, loading states, error handling. Never put API calls directly in components — abstract to service files or custom hooks.","tags":"fetch, Axios, TanStack Query, interceptors"},{"id":30,"q":"How do you handle offline functionality?","a":"@react-native-community/netinfo detects network changes. Show offline UI or queue actions on disconnect. For offline data use WatermelonDB or SQLite (expo-sqlite) and sync when back online. React Query's offline mode auto-pauses and retries when network restores.","tags":"netinfo, SQLite, WatermelonDB, queue, sync"},{"id":31,"q":"What is MMKV and how is it better than AsyncStorage?","a":"MMKV from WeChat via react-native-mmkv. It's synchronous — no await needed. 10x+ faster than AsyncStorage. Synchronous reads are great for values checked on every render like auth tokens or settings. My go-to replacement for AsyncStorage.","tags":"synchronous, performance, key-value, benchmarks"},{"id":32,"q":"How do you implement biometric authentication?","a":"react-native-biometrics or expo-local-authentication handle Face ID, Touch ID, fingerprint. Check availability, prompt for auth, get result. For secure storage after biometric auth use Keychain (iOS) or Keystore (Android) via react-native-keychain. Never store sensitive data in AsyncStorage.","tags":"Face ID, Touch ID, Keychain, Keystore, SecureStore"},{"id":33,"q":"What is code push / OTA updates?","a":"EAS Update or CodePush pushes JavaScript and asset updates without app store review. Can't update native code. Great for hotfixes. I use it for bug fixes only, not major feature changes. Update is downloaded in background and applied on next restart.","tags":"EAS Update, CodePush, OTA, JS bundle, hotfix"},{"id":34,"q":"How do you profile React Native performance?","a":"Flipper debugger with React DevTools for component tree. Hermes profiler for JS performance. Performance Monitor overlay (shake device) shows FPS, RAM, JS bundle size. Systrace (Android) and Instruments (iOS) for native rendering. why-did-you-render to identify unnecessary re-renders.","tags":"Flipper, Hermes, Systrace, Instruments, why-did-you-render"},{"id":35,"q":"What is Hermes?","a":"Hermes is Meta's JS engine for RN, optimized for startup time and memory on mobile. Pre-compiles JS to bytecode ahead of time — reduces parse time on device. Supports all modern JS. Default engine for both iOS and Android in recent RN versions.","tags":"bytecode, startup time, AOT compilation, default engine"},{"id":36,"q":"What are some React Native performance best practices?","a":"Use FlatList with proper keyExtractor. Avoid anonymous functions and object literals as props — use useCallback and useMemo. Use React.memo for pure components. Move animations to UI thread with Reanimated. Use InteractionManager for heavy work after animations. Profile before optimizing.","tags":"FlatList, memoization, Reanimated, InteractionManager, Hermes"},{"id":37,"q":"What is the InteractionManager?","a":"InteractionManager.runAfterInteractions(() => { heavyWork() }) schedules work to run after all animations and interactions finish. Prevents heavy computation from causing jank during navigation transitions. I use it for loading large lists or parsing data after a screen transition completes.","tags":"deferred work, animation, jank, navigation transitions"},{"id":38,"q":"How do you handle errors in React Native?","a":"Error Boundaries for component tree errors. ErrorUtils.setGlobalHandler or react-native-error-boundary for unhandled JS errors. Sentry (@sentry/react-native) for production — captures JS and native crashes with breadcrumbs. Set up source maps upload in CI/CD for readable stack traces.","tags":"Sentry, ErrorBoundary, global handler, source maps"},{"id":39,"q":"What is accessibility in React Native?","a":"Built-in accessibility props: accessible, accessibilityLabel, accessibilityRole, accessibilityHint, accessibilityState. Screen readers (VoiceOver on iOS, TalkBack on Android) use these. I always set accessibilityLabel on icon buttons. accessibilityRole tells screen reader what type of element it is. Test with VoiceOver.","tags":"VoiceOver, TalkBack, a11y, accessibilityLabel, WCAG"},{"id":40,"q":"How do you test React Native apps?","a":"Unit tests with Jest for pure logic. Component tests with React Native Testing Library — render, query by accessibility roles, simulate interactions. E2E with Detox — controls actual device, performs taps/swipes/forms. I write unit tests for business logic, RNTL for component behaviour, Detox for critical flows like login.","tags":"Jest, RNTL, Detox, E2E, unit tests"},{"id":41,"q":"What is the difference between absolute and relative positioning?","a":"position:'relative' (default) keeps component in normal flow, offset from natural position. position:'absolute' removes from flow, positions relative to nearest positioned parent. I use absolute for overlays, badges, floating buttons. Full-screen overlay: position absolute with top/left/right/bottom all 0.","tags":"layout flow, overlay, badge, z-index"},{"id":42,"q":"How do you handle fonts in React Native?","a":"Add font files, configure react-native.config.js, run react-native link. On iOS fonts listed in Info.plist. On Android in assets/fonts. Reference with fontFamily:'FontName'. Expo: @expo-google-fonts for instant Google Fonts. Use useFonts hook to ensure fonts load before rendering.","tags":"custom fonts, linking, useFonts, expo-font"},{"id":43,"q":"What is the difference between React Native and Flutter?","a":"RN uses JavaScript, renders native platform components via JSI/bridge. Flutter uses Dart with its own Skia/Impeller rendering engine that draws every pixel itself. RN gives more native feel. Flutter gives pixel-perfect control and better consistency across OS versions. I know RN deeply — it shares skills with React web.","tags":"Dart, Skia, native vs custom renderer"},{"id":44,"q":"What are common React Native navigation patterns?","a":"Auth flow: root navigator switches between Auth stack and Main stack based on login state. Tab+Stack: bottom tabs where each tab has its own stack. Modal presentation: root stack with modal group. I keep navigation structure in a dedicated navigator file and keep screens thin.","tags":"Auth flow, nested navigators, modal, tab+stack"},{"id":45,"q":"What is WatermelonDB?","a":"WatermelonDB is a reactive database for RN built on SQLite for high performance with large datasets. Lazy loading — only loads data you access. Observable pattern — components subscribe to DB changes and re-render automatically. Designed for offline-first apps with sync. I prefer it over plain SQLite for complex local data.","tags":"SQLite, reactive, offline-first, sync, observable"},{"id":46,"q":"What is the Shadow Thread in React Native?","a":"The shadow thread is where Yoga (Facebook's flexbox layout engine) runs layout calculations. Computes layouts from JS style descriptions and communicates to UI thread. With Fabric (new arch), layout computation can happen synchronously using JSI, enabling synchronous layout reads from JS.","tags":"Yoga, layout, Fabric, JSI, UI thread"},{"id":47,"q":"What is TextInput and how do you manage focus?","a":"TextInput is RN's form input. Key props: value + onChangeText for controlled, placeholder, keyboardType, secureTextEntry. Managing focus: use ref and ref.current.focus() programmatically, or returnKeyType + onSubmitEditing to move focus to next field. Always set accessibilityLabel for screen readers.","tags":"controlled input, focus, keyboardType, ref, accessibility"},{"id":48,"q":"What is SafeAreaProvider and why use react-native-safe-area-context?","a":"SafeAreaProvider wraps the app and measures safe area insets from native. useSafeAreaInsets hook gives exact numeric insets for top/bottom/left/right — more precise than SafeAreaView component. I wrap app layout with SafeAreaProvider once at root and use useSafeAreaInsets in individual screens for fine control over layout.","tags":"insets, SafeAreaProvider, useSafeAreaInsets, notch"}],"Node + Express + MongoDB":[{"id":1,"q":"What is Node.js and why use it for backend?","a":"Node.js is a JavaScript runtime built on V8 enabling server-side JS. Key feature: non-blocking I/O — network, file, DB operations don't block; they use callbacks/promises. Excellent for I/O-heavy REST APIs. JS on both front and backend means shared skills and code. npm provides massive ecosystem.","tags":"V8, non-blocking I/O, event loop, npm"},{"id":2,"q":"What is the difference between CommonJS and ES Modules?","a":"CommonJS uses require/module.exports — traditional Node, synchronous, works without config. ES Modules use import/export — browser standard, in Node via .mjs or 'type':'module' in package.json. ES Modules enable static analysis, tree shaking, top-level await. For new projects I use ES Modules.","tags":"require, import/export, .mjs, interop"},{"id":3,"q":"What is the event loop in Node.js?","a":"Phases: timers (setTimeout/setInterval), pending I/O, idle/prepare, poll (wait for I/O), check (setImmediate), close callbacks. Between phases: nextTick queue then Promise microtasks are drained first. nextTick runs before Promises. Understanding this prevents blocking the loop with CPU-heavy sync work.","tags":"phases, nextTick, setImmediate, microtask, blocking"},{"id":4,"q":"What are streams in Node.js?","a":"Streams process data in chunks — no need to load everything into memory. Types: Readable (fs.createReadStream), Writable (HTTP res), Duplex (both), Transform (modify while passing through — gzip). Pipe connects them: readStream.pipe(gzip).pipe(writeStream). Essential for large file processing or video streaming.","tags":"pipe, readable/writable, memory efficiency, backpressure"},{"id":5,"q":"What is Express.js and what does it provide?","a":"Express is a minimal web framework for Node.js providing routing (HTTP method + path to handlers) and middleware (request/response pipeline functions). Unopinionated — no forced structure, ORM, or templating. I add only what I need: cors, helmet, morgan, express-validator.","tags":"routing, middleware, request/response cycle, unopinionated"},{"id":6,"q":"What is middleware in Express?","a":"Middleware are functions with (req,res,next) signature running in sequence during the request lifecycle. Can modify req/res, end the request, or call next(). Types: application-level (app.use), router-level, error-handling (4 args: err,req,res,next), third-party. ORDER MATTERS.","tags":"next(), pipeline, order, error middleware"},{"id":7,"q":"How do you handle errors in Express?","a":"Create centralized error middleware with 4 params (err,req,res,next) registered LAST with app.use. In routes, pass errors with next(err). I create custom AppError class with statusCode. Error handler maps error types to HTTP status codes. Use express-async-errors to catch async errors without try/catch in every route.","tags":"centralized error handler, AppError, express-async-errors, 4-param"},{"id":8,"q":"What is MongoDB and when to use it vs SQL?","a":"MongoDB is a NoSQL document database — BSON documents in collections, flexible schema. Good for: flexible/evolving data, hierarchical data, horizontal scaling. Choose SQL (PostgreSQL) for: strong relational data with joins, ACID transactions across entities, complex reporting. MongoDB is great for catalogs, profiles, content.","tags":"NoSQL, document, BSON, schema-less, when to use"},{"id":9,"q":"What is Mongoose and why use it?","a":"Mongoose is an ODM for MongoDB providing schemas, models, validation, middleware (pre/post hooks), virtuals, and rich query API. Without it you use raw driver — flexible but no validation or business logic. I always use Mongoose for structure, validation, and hooks.","tags":"ODM, schema, model, validation, hooks"},{"id":10,"q":"How do you define a Mongoose schema?","a":"new mongoose.Schema({field:{type,required,default,validate}}). Create model: mongoose.model('User',userSchema). Model provides CRUD: User.find(), User.create(), user.save(). Schema types: String,Number,Boolean,Date,ObjectId,Mixed,Array. Always add timestamps:true for createdAt/updatedAt.","tags":"Schema, Model, types, indexes, timestamps"},{"id":11,"q":"What are Mongoose virtuals?","a":"Computed properties derived from other fields — not stored in DB. Example: fullName from firstName+lastName. schema.virtual('fullName').get(function(){return this.firstName+' '+this.lastName}). Use toJSON({virtuals:true}) to include in API responses. Great for presentation transformations.","tags":"computed properties, toJSON, getter/setter"},{"id":12,"q":"What are Mongoose middleware (hooks)?","a":"Pre/post hooks run before or after operations. Pre-save for hashing passwords: schema.pre('save',async function(){if(this.isModified('password')) this.password=await bcrypt.hash(this.password,10)}). Post-find for population. Use regular functions (not arrow) to access 'this'.","tags":"pre/post hooks, save, find, password hashing"},{"id":13,"q":"How do you handle relationships in MongoDB?","a":"Embedding: sub-documents inside parent — for data always accessed together (address in user). Referencing: store ObjectId and populate with .populate() — for shared data accessed independently. Populate performs a second query to resolve references. Use aggregate with $lookup for complex joins.","tags":"embedding, referencing, populate, ObjectId, normalization"},{"id":14,"q":"What is the populate method in Mongoose?","a":"populate() replaces ObjectId references with actual documents from another collection. User.find().populate('posts') fetches referenced posts. Can chain populates and select specific fields. For performance use aggregate with $lookup or lean() queries. Avoid N+1 — populate can cause one query per document.","tags":"join equivalent, $lookup, lean, N+1 problem"},{"id":15,"q":"What are MongoDB aggregation pipelines?","a":"Pipeline processes documents through stages: $match (filter), $group (group+compute), $sort, $project (shape output), $lookup (join), $unwind (flatten arrays), $limit, $skip. Example: group sales by product and sum amounts. More powerful and performant than multiple queries for analytics.","tags":"$match, $group, $lookup, $project, $unwind"},{"id":16,"q":"How do you implement JWT authentication in Express?","a":"User logs in → server verifies → jwt.sign({userId,role},secret,{expiresIn:'7d'}) → client stores token in HttpOnly cookie → auth middleware on subsequent requests decodes with jwt.verify() → attaches user to req.user → protected routes use this middleware. Use HTTPS, short-lived access tokens, refresh token rotation.","tags":"jwt.sign, jwt.verify, middleware, refresh tokens, HttpOnly"},{"id":17,"q":"What is bcrypt and why use it for passwords?","a":"bcrypt is a deliberately slow hashing function with a cost factor making brute-force expensive. Hash on registration: bcrypt.hash(password,10). Verify on login: bcrypt.compare(input,storedHash). Never store plain or MD5/SHA1 passwords. Salt rounds (10) make each hash unique even for identical passwords.","tags":"hashing, salt, cost factor, rainbow tables, bcrypt.compare"},{"id":18,"q":"What is CORS and how do you configure it?","a":"CORS is a browser security mechanism blocking cross-origin requests. The cors package handles it in Express. Configure: cors({origin:['https://myapp.com'],credentials:true,methods:['GET','POST']}). Production: whitelist specific domains. Credentials (cookies) require explicit allowCredentials.","tags":"Same-origin policy, preflight, origins, credentials"},{"id":19,"q":"What is rate limiting and how to implement it?","a":"Rate limiting restricts request frequency to prevent brute force and abuse. Use express-rate-limit: rateLimit({windowMs:15*60*1000,max:100}). Apply globally or to specific routes — stricter on auth routes. For distributed systems store rate limit data in Redis so it works across server instances.","tags":"express-rate-limit, Redis, brute force, abuse prevention"},{"id":20,"q":"How do you handle file uploads in Express?","a":"multer middleware handles multipart/form-data. diskStorage for local files (dev), memoryStorage to process buffers. For production always upload to cloud: AWS S3 or Cloudinary via their SDKs or multer-s3. Always validate file types and size limits.","tags":"multer, multipart, S3, Cloudinary, file validation"},{"id":21,"q":"What is input validation in Express?","a":"Never trust user input. I use express-validator: check('field').notEmpty().isEmail(). validationResult(req) collects errors. Define validation as middleware arrays, check results in handler. Alternatively use Joi or Zod for schema-based validation. Validation is first defence against injection attacks.","tags":"express-validator, Joi, Zod, sanitization, security"},{"id":22,"q":"What is the difference between authentication and authorization?","a":"Authentication: verifying WHO you are — login/OAuth. Authorization: verifying WHAT you can do — RBAC. In Express: JWT middleware handles authentication. Authorization middleware checks req.user.role against required roles. I define role constants and create requireRole('admin') middleware factories.","tags":"authn vs authz, RBAC, roles, JWT, middleware"},{"id":23,"q":"What is database indexing in MongoDB?","a":"Indexes enable fast queries — without index MongoDB scans entire collection O(n). With index on email: query is O(log n). Create with schema.index({email:1},{unique:true}). Compound indexes for multi-field queries. Indexes have write overhead — only index fields you actually query on.","tags":"collection scan, compound index, unique, write overhead"},{"id":24,"q":"What is connection pooling in MongoDB?","a":"Connection pooling maintains reusable connections instead of opening new ones per request. Mongoose auto-manages a pool on mongoose.connect(). Default pool size is 5. Increase for high-concurrency: mongoose.connect(uri,{maxPoolSize:20}). Always connect once at startup, not per request.","tags":"poolSize, performance, startup, maxPoolSize"},{"id":25,"q":"What are environment variables and how to manage them?","a":"Env vars store config outside code — DB URIs, JWT secrets, API keys. Use dotenv: dotenv.config() loads .env into process.env. Never commit .env to git — add to .gitignore. Provide .env.example with var names. In production, set vars through hosting platform. Use config module that validates required vars at startup.","tags":"dotenv, process.env, .gitignore, secrets management"},{"id":26,"q":"What is the difference between PUT and PATCH?","a":"PUT replaces entire resource — omitting a field makes it null. PATCH partially updates — send only fields to change. I use PUT when client constructs the full resource and PATCH for partial updates like changing just an email.","tags":"REST, idempotent, partial update, HTTP methods"},{"id":27,"q":"What is RESTful API design?","a":"HTTP methods semantically: GET fetch, POST create, PUT/PATCH update, DELETE remove. Resources as nouns in URLs: /users, /users/:id/orders. Proper status codes: 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Error. Version API: /api/v1/. Stateless — no server session.","tags":"HTTP methods, status codes, versioning, stateless, nouns"},{"id":28,"q":"What is GraphQL and how does it differ from REST?","a":"GraphQL: clients request exactly the fields needed — no over/under-fetching. Single /graphql endpoint. Schema defines types and resolvers. Mutations replace POST/PUT/DELETE. Subscriptions for real-time. Drawbacks: complex setup, harder caching, N+1 needs DataLoader. For mobile reduces data transfer significantly.","tags":"schema, resolvers, mutations, subscriptions, over-fetching"},{"id":29,"q":"What is the N+1 problem and how to solve it?","a":"N+1: fetch list of N items, then N more queries for related data. In Mongoose with populate this is common. Solutions: $lookup in aggregation (one query), DataLoader in GraphQL (batching), lean() with manual population, or restructuring data access. Always check query counts when something feels slow.","tags":"population, $lookup, DataLoader, batching, query optimization"},{"id":30,"q":"What is Redis and when to use it?","a":"Redis is in-memory store — extremely fast. Use cases: caching, session storage, rate limiting, pub/sub, real-time leaderboards, job queues (BullMQ). Use ioredis in Node.js. Cache pattern: check Redis first, miss → fetch from MongoDB → store with TTL. Cache invalidation is the hard part.","tags":"caching, TTL, session, pub/sub, BullMQ, cache invalidation"},{"id":31,"q":"What is WebSocket and Socket.io?","a":"WebSocket: full-duplex communication over single TCP connection — real-time bidirectional messaging. HTTP is request/response; WebSocket is persistent. Socket.io adds fallbacks, room management, reconnection. I use it for chat, live notifications, collaborative features.","tags":"real-time, bidirectional, rooms, events, HTTP vs WS"},{"id":32,"q":"What is a job queue and when to use it?","a":"Job queues handle background tasks that shouldn't block HTTP response — sending emails, resizing images, generating reports. BullMQ (Redis-based) is modern choice. Push job to queue, worker processes async. Benefits: retries, delays, priorities, concurrency control, monitoring. I always use queues for email and any op taking 100ms+.","tags":"BullMQ, Bull, async processing, workers, retry"},{"id":33,"q":"What are Worker Threads in Node.js?","a":"Worker Threads run JS in parallel threads, sharing memory via SharedArrayBuffer, communicating via messages. For CPU-bound work — complex calculations, image processing, ML inference. Don't use for I/O (use async instead). cluster module forks multiple Node processes for horizontal scaling.","tags":"CPU-bound, parallelism, SharedArrayBuffer, cluster vs workers"},{"id":34,"q":"How do you handle database transactions in MongoDB?","a":"MongoDB supports multi-document ACID transactions since v4.0 with replica sets. Start session: mongoose.startSession(). session.startTransaction(). Run operations with {session} option. session.commitTransaction() or session.abortTransaction() on error. Use when multiple docs must update atomically — like fund transfers.","tags":"ACID, session, replica set, atomicity, commit/abort"},{"id":35,"q":"What is PM2 and why use it?","a":"PM2 is a process manager: keeps app running by restarting on crash, cluster mode for all CPU cores, logging, monitoring, zero-downtime reloads. pm2 start app.js --instances max for cluster mode. I use PM2 or Docker for all production Node deployments.","tags":"process manager, clustering, auto-restart, zero-downtime"},{"id":36,"q":"What is the helmet middleware?","a":"helmet sets HTTP security headers: X-Frame-Options (clickjacking), X-XSS-Protection, Content-Security-Policy, Strict-Transport-Security, X-Content-Type-Options. Just app.use(helmet()) adds 15+ security headers. Must-have for production. I configure CSP carefully to specify allowed content sources.","tags":"security headers, CSP, XSS, clickjacking, HTTPS"},{"id":37,"q":"How do you implement pagination in MongoDB?","a":"Cursor-based: filter documents after last seen cursor (_id or createdAt) — efficient for large datasets, handles concurrent inserts. Offset-based: skip(page*limit).limit(size) — simpler but slower for large offsets. I use cursor-based for infinite scroll feeds, offset-based for admin tables with page numbers.","tags":"cursor, skip/limit, infinite scroll, performance"},{"id":38,"q":"What is the difference between session-based and token-based auth?","a":"Session: server stores data, client gets session ID cookie. Requires shared storage (Redis) for multiple servers. Token (JWT): client stores signed token, server verifies signature without DB lookup — stateless, scales horizontally. I prefer JWTs for APIs. JWT tradeoff: can't easily invalidate before expiry.","tags":"stateless vs stateful, Redis sessions, JWT, horizontal scaling"},{"id":39,"q":"How do you implement refresh tokens?","a":"Access tokens: short-lived (15 min) — limits exposure if stolen. Refresh tokens: long-lived (7-30 days) in HttpOnly cookies. On access token expiry, client calls /auth/refresh, server verifies refresh token in DB (allows revocation), issues new access token. Refresh token rotation — each use invalidates old token and issues new one.","tags":"rotation, HttpOnly, revocation, short-lived, security"},{"id":40,"q":"How do you structure a large Express application?","a":"Layered architecture: routes (HTTP layer) → controllers (req/res handling) → services (business logic) → models/repositories (data access). Keep controllers thin — validate input, call service, send response. Services contain business rules, framework-agnostic, testable. Models define data structure only.","tags":"MVC, service layer, controller, separation of concerns"},{"id":41,"q":"What is Docker and why use it for Node apps?","a":"Docker packages app and dependencies into a container — runs identically in dev, CI, production. Dockerfile: FROM node:18-alpine, COPY package*.json, RUN npm ci, COPY ., CMD node server.js. Multi-stage builds keep production images small. docker-compose for local dev with DB containers.","tags":"container, Dockerfile, docker-compose, multi-stage, portability"},{"id":42,"q":"What is TypeScript with Node/Express?","a":"TypeScript adds static types to JavaScript. Type req, res, and custom properties in Express. @types/express for type definitions. Define interfaces for request bodies and services. Catches type errors at compile time. Use ts-node for dev, compile to JS for production. Larger codebases benefit greatly from type safety.","tags":"static types, interfaces, @types, ts-node, compile-time"},{"id":43,"q":"How do you write unit tests for Node.js?","a":"Jest for testing framework. Unit tests: mock all dependencies with jest.mock(). Test service functions in isolation. supertest for HTTP layer — makes requests against Express app without real server. High coverage on business logic (services), lighter on routes. Use beforeEach to reset mocks.","tags":"Jest, supertest, mocking, unit vs integration, coverage"},{"id":44,"q":"What is CI/CD for a Node.js project?","a":"CI: runs tests automatically on every push/PR. CD: deploys after tests pass. GitHub Actions: install deps, lint, test, build, deploy. Cache npm deps, use node version matrix, store secrets as GitHub secrets. Deploy to Railway/Heroku/AWS. Always deploy to staging before production.","tags":"GitHub Actions, pipeline, staging, automated testing"},{"id":45,"q":"What is logging in Node.js?","a":"winston or pino for structured JSON logs with levels: error, warn, info, debug. Morgan for request/response in development. Include correlation IDs to trace across services. Never log passwords or tokens. Ship to Datadog/Logtail/CloudWatch for search and alerting in production.","tags":"winston, pino, structured logs, log levels, correlation ID"},{"id":46,"q":"What is the difference between SQL and NoSQL?","a":"SQL: structured tables, fixed schemas, ACID transactions, complex JOINs. NoSQL: flexible schemas, horizontal scaling, eventual consistency. SQL better for complex relational data and financial transactions. NoSQL better for flexible, high-scale, document-oriented data. I choose based on data shape and access patterns.","tags":"ACID, schema, horizontal scaling, CAP theorem"},{"id":47,"q":"What is input sanitization vs validation?","a":"Validation checks if input meets rules — is this a valid email? Is this required field present? Sanitization cleans input — strip HTML tags, trim whitespace, normalize unicode. Both are needed. express-validator does both: check('email').isEmail().normalizeEmail(). Sanitize to prevent XSS and injection. Validate to ensure data integrity.","tags":"security, express-validator, XSS prevention, data integrity"},{"id":48,"q":"What is the difference between HTTP 401 and 403?","a":"401 Unauthorized: the client is not authenticated — needs to log in. 403 Forbidden: the client IS authenticated but doesn't have permission. A logged-in user trying to access an admin route gets 403. An unauthenticated request to a protected route gets 401. I use these precisely in my Express error handler.","tags":"HTTP status codes, authentication, authorization, REST"},{"id":49,"q":"What is GraphQL Apollo Server?","a":"Apollo Server is the most popular GraphQL server for Node.js. Define typeDefs (schema) and resolvers. Integrates with Express via expressMiddleware. Provides playground for testing, automatic persisted queries, plugin system. I use it with DataLoader to batch DB queries and avoid N+1 in GraphQL APIs.","tags":"typeDefs, resolvers, DataLoader, playground, schema"}]};
 
 const DSA_KEY = 'dsa_problems_v2';
-
 const DEFAULT_DSA = [
-  {
-    id: 1,
-    q: "Count digits in a number",
-    a: "Baar baar n ko 10 se divide karo jab tak 0 na ho jaye, har baar count badho.\n\nExample: 1234 → 123 → 12 → 1 → 0 = 4 digits\n\nApproach: Last digit nikalte jaao (n%10) aur counter badhate jaao. Ya phir Math.floor(n/10) se number chhota karte jaao.",
-    code: `const findCount = (n) => {
+  {id:1,q:"Count digits in a number",a:"Baar baar n ko 10 se divide karo jab tak 0 na ho jaye, har baar count badho.\n\nExample: 1234 → 123 → 12 → 1 → 0 = 4 digits\n\nApproach: Math.floor(n/10) se number chhota karte jao aur count badhate jao.",code:`const findCount = (n) => {
   var count = 0;
   while (n > 0) {
     count = count + 1;        // count badha do
@@ -425,354 +454,173 @@ const DEFAULT_DSA = [
   }
   return count;
 };
-
 console.log(findCount(1234)); // 4
-console.log(findCount(100));  // 3
-console.log(findCount(7));    // 1`,
-    tags: "math, loops, digits",
-    timeComplexity: "O(log n)",
-    spaceComplexity: "O(1)",
-    difficulty: "easy",
-    addedToday: true
-  },
-  {
-    id: 2,
-    q: "Reverse a number & check Palindrome",
-    a: "Last digit nikalo (n%10), rev ko shift karo (rev*10 + digit), number se digit hato (Math.floor(n/10)).\n\nPalindrome: agar reversed number == original number toh palindrome hai.\n\nExample: 121 reverse → 121 ✓ palindrome\nExample: 125 reverse → 521 ✗ not palindrome",
-    code: `function reverseNumber(n) {
+console.log(findCount(100));  // 3`,tags:"math, loops, digits",timeComplexity:"O(log n)",spaceComplexity:"O(1)",difficulty:"easy",addedToday:true},
+  {id:2,q:"Reverse a number & check Palindrome",a:"Last digit nikalo (n%10), rev ko shift karo (rev*10 + digit), number se digit hato.\n\nPalindrome: agar reversed == original toh palindrome hai.\n\nExample: 121 → 121 ✓ palindrome | 125 → 521 ✗ not palindrome",code:`function reverseNumber(n) {
   let rev = 0;
-  let duplicate = n;  // original save karo comparison ke liye
-
+  let duplicate = n;
   while (n > 0) {
     let digit = n % 10;       // last digit nikaalo
     rev = rev * 10 + digit;   // jagah banao, digit daalo
     n = Math.floor(n / 10);   // last digit hatao
   }
-
-  // Palindrome check
-  if (rev === duplicate) {
-    return true;   // palindrome hai
-  } else {
-    return false;  // palindrome nahi hai
-  }
+  return rev === duplicate;   // palindrome check
 }
-
-console.log(reverseNumber(121)); // true  ✓
-console.log(reverseNumber(1221)); // true ✓
-console.log(reverseNumber(125)); // false ✗`,
-    tags: "math, loops, palindrome, two-pointer",
-    timeComplexity: "O(log n)",
-    spaceComplexity: "O(1)",
-    difficulty: "easy",
-    addedToday: true
-  }
+console.log(reverseNumber(121));  // true
+console.log(reverseNumber(125));  // false`,tags:"math, loops, palindrome",timeComplexity:"O(log n)",spaceComplexity:"O(1)",difficulty:"easy",addedToday:true}
 ];
 
-function loadDSA() {
-  try {
-    const saved = localStorage.getItem(DSA_KEY);
-    if (saved) return JSON.parse(saved);
-  } catch(e) {}
-  const initial = JSON.parse(JSON.stringify(DEFAULT_DSA));
-  saveDSAData(initial);
-  return initial;
-}
-function saveDSAData(arr) {
-  try { localStorage.setItem(DSA_KEY, JSON.stringify(arr)); } catch(e) {}
-}
+function loadDSA(){try{const s=localStorage.getItem(DSA_KEY);if(s)return JSON.parse(s);}catch(e){}const d=JSON.parse(JSON.stringify(DEFAULT_DSA));saveDSAData(d);return d;}
+function saveDSAData(a){try{localStorage.setItem(DSA_KEY,JSON.stringify(a));}catch(e){}}
 
-const TABS_MAP = {
-  js: 'JavaScript Core',
-  react: 'React JS',
-  rn: 'React Native',
-  node: 'Node + Express + MongoDB'
-};
+const TABS_MAP={js:'JavaScript Core',react:'React JS',rn:'React Native',node:'Node + Express + MongoDB'};
+let currentTab='js',currentMode='study',fcIndex=0,fcDeck=[],fcFlipped=false,searchQ='',addFormOpen=false;
+let done={};try{done=JSON.parse(localStorage.getItem('ip_done')||'{}');}catch(e){done={};}
+let dsaProblems=loadDSA();
+const activeFilters=new Set();
 
-let currentTab = 'js';
-let currentMode = 'study';
-let done = {};
-try { done = JSON.parse(localStorage.getItem('ip_done') || '{}'); } catch(e) { done = {}; }
-let fcIndex = 0, fcDeck = [], fcFlipped = false, searchQ = '';
-let activeFilters = new Set();
-let dsaProblems = loadDSA();
-let addFormOpen = false;
-
-function saveDone() { try { localStorage.setItem('ip_done', JSON.stringify(done)); } catch(e) {} }
-function getKey(tab, id) { return tab + '_' + id; }
-
-function allQuestions() {
-  if (currentTab === 'dsa') return dsaProblems;
-  const section = TABS_MAP[currentTab];
-  return DATA[section] || [];
-}
-
-function getFiltered() {
-  let qs = allQuestions();
-  if (searchQ) {
-    const q = searchQ.toLowerCase();
-    qs = qs.filter(x => x.q.toLowerCase().includes(q) || x.a.toLowerCase().includes(q) || x.tags.toLowerCase().includes(q));
-  }
-  if (activeFilters.size > 0) {
-    qs = qs.filter(x => [...activeFilters].some(f => x.tags.toLowerCase().includes(f.toLowerCase())));
-  }
+function saveDone(){try{localStorage.setItem('ip_done',JSON.stringify(done));}catch(e){}}
+function getKey(tab,id){return tab+'_'+id;}
+function allQuestions(){if(currentTab==='dsa')return dsaProblems;return DATA[TABS_MAP[currentTab]]||[];}
+function getFiltered(){
+  let qs=allQuestions();
+  if(searchQ){const q=searchQ.toLowerCase();qs=qs.filter(x=>x.q.toLowerCase().includes(q)||x.a.toLowerCase().includes(q)||x.tags.toLowerCase().includes(q));}
+  if(activeFilters.size>0)qs=qs.filter(x=>[...activeFilters].some(f=>x.tags.toLowerCase().includes(f.toLowerCase())));
   return qs;
 }
+function hl(text,query){if(!query)return text;const re=new RegExp('('+query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');return text.replace(re,'<mark>$1</mark>');}
+function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function getDiffColor(d){return d==='easy'?'#3FB950':d==='medium'?'#E3B341':'#F78166';}
 
-function hl(text, query) {
-  if (!query) return text;
-  const re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-  return text.replace(re, '<mark>$1</mark>');
+function renderStats(){
+  const all=allQuestions(),total=all.length,doneCount=all.filter(x=>done[getKey(currentTab,x.id)]).length,pct=total?Math.round(doneCount/total*100):0;
+  document.getElementById('s-total').textContent=total;
+  document.getElementById('s-done').textContent=doneCount;
+  document.getElementById('s-pct').textContent=pct+'%';
+  document.getElementById('s-left').textContent=total-doneCount;
+  document.getElementById('s-bar').style.width=pct+'%';
+  document.getElementById('doneCount').textContent=doneCount;
+  document.getElementById('totalCount').textContent=total;
+  document.getElementById('badge-dsa').textContent=dsaProblems.length;
 }
 
-function escHtml(s) {
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function renderFilters(){
+  const qs=allQuestions(),tagSet=new Set();
+  qs.forEach(x=>x.tags.split(',').forEach(t=>{const tt=t.trim();if(tt)tagSet.add(tt);}));
+  const top=[...tagSet].slice(0,12);
+  let html='<button class="filter-btn '+(activeFilters.size===0?'on':'')+'" onclick="clearFilters()">All</button>';
+  top.forEach(t=>{const esc=t.replace(/'/g,"\\'");html+=`<button class="filter-btn ${activeFilters.has(t)?'on':''}" onclick="toggleFilter('${esc}')"># ${t}</button>`;});
+  document.getElementById('filtersRow').innerHTML=html;
 }
 
-function renderStats() {
-  const all = allQuestions();
-  const total = all.length;
-  const doneCount = all.filter(x => done[getKey(currentTab, x.id)]).length;
-  const pct = total ? Math.round(doneCount / total * 100) : 0;
-  document.getElementById('s-total').textContent = total;
-  document.getElementById('s-done').textContent = doneCount;
-  document.getElementById('s-pct').textContent = pct + '%';
-  document.getElementById('s-left').textContent = total - doneCount;
-  document.getElementById('s-bar').style.width = pct + '%';
-  document.getElementById('doneCount').textContent = doneCount;
-  document.getElementById('totalCount').textContent = total;
-  document.getElementById('badge-dsa').textContent = dsaProblems.length;
-}
-
-function getDiffColor(d) {
-  if (d === 'easy') return '#3FB950';
-  if (d === 'medium') return '#E3B341';
-  return '#F78166';
-}
-
-function renderFilters() {
-  const qs = allQuestions();
-  const tagSet = new Set();
-  qs.forEach(x => x.tags.split(',').forEach(t => { const tt = t.trim(); if (tt) tagSet.add(tt); }));
-  const top = [...tagSet].slice(0, 12);
-  const row = document.getElementById('filtersRow');
-  let html = '<button class="filter-btn ' + (activeFilters.size === 0 ? 'on' : '') + '" onclick="clearFilters()">All</button>';
-  top.forEach(t => {
-    const esc = t.replace(/'/g, "\\'").replace(/"/g, '\\"');
-    html += `<button class="filter-btn ${activeFilters.has(t) ? 'on' : ''}" onclick="toggleFilter('${esc}')"># ${t}</button>`;
-  });
-  row.innerHTML = html;
-}
-
-function renderCards() {
-  const qs = getFiltered();
-  const list = document.getElementById('cardList');
-  const empty = document.getElementById('emptyMsg');
-  let html = '';
-
-  if (currentTab === 'dsa') {
-    html += `<div class="add-btn" onclick="toggleAddForm()">➕ Aaj ka naya program add karo — roz yahan daalo!</div>
-      <div class="add-form ${addFormOpen ? 'open' : ''}" id="addForm">
-        <div class="form-group"><label>Problem Name / Question</label><input type="text" id="f-q" placeholder="e.g. Two Sum, Binary Search, Fibonacci..."/></div>
-        <div class="form-group"><label>Explanation (Hinglish me likho)</label><textarea id="f-a" placeholder="Approach kya hai, kaise socha, kya trick hai..."></textarea></div>
-        <div class="form-group"><label>Your Code</label><textarea id="f-code" placeholder="Apna code yahan paste karo..." style="min-height:140px;font-family:'JetBrains Mono',monospace;font-size:12px"></textarea></div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <div class="form-group" style="flex:1;min-width:120px"><label>Time Complexity</label><input type="text" id="f-time" placeholder="O(n)" /></div>
-          <div class="form-group" style="flex:1;min-width:120px"><label>Space Complexity</label><input type="text" id="f-space" placeholder="O(1)" /></div>
-          <div class="form-group" style="flex:1;min-width:120px"><label>Difficulty</label>
-            <select id="f-diff"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select>
-          </div>
-        </div>
-        <div class="form-group"><label>Tags (comma separated)</label><input type="text" id="f-tags" placeholder="array, loops, math, recursion"/></div>
-        <div class="form-actions">
-          <button class="btn-save" onclick="addProblem()">💾 Save Problem</button>
-          <button class="btn-cancel" onclick="toggleAddForm()">Cancel</button>
-        </div>
-      </div>`;
+function renderCards(){
+  const qs=getFiltered(),list=document.getElementById('cardList'),empty=document.getElementById('emptyMsg');
+  let html='';
+  if(currentTab==='dsa'){
+    html+=`<div class="add-btn" onclick="toggleAddForm()">➕ Aaj ka naya program add karo — roz yahan daalo!</div>
+    <div class="add-form ${addFormOpen?'open':''}" id="addForm">
+      <div class="form-group"><label>Problem Name / Question</label><input type="text" id="f-q" placeholder="e.g. Two Sum, Binary Search..."/></div>
+      <div class="form-group"><label>Explanation (Hinglish me)</label><textarea id="f-a" placeholder="Approach kya hai, kaise socha..."></textarea></div>
+      <div class="form-group"><label>Your Code</label><textarea id="f-code" placeholder="Apna code yahan paste karo..." style="min-height:140px;font-family:'JetBrains Mono',monospace;font-size:12px"></textarea></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div class="form-group" style="flex:1;min-width:120px"><label>Time Complexity</label><input type="text" id="f-time" placeholder="O(n)"/></div>
+        <div class="form-group" style="flex:1;min-width:120px"><label>Space Complexity</label><input type="text" id="f-space" placeholder="O(1)"/></div>
+        <div class="form-group" style="flex:1;min-width:120px"><label>Difficulty</label><select id="f-diff"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select></div>
+      </div>
+      <div class="form-group"><label>Tags (comma separated)</label><input type="text" id="f-tags" placeholder="array, loops, math"/></div>
+      <div class="form-actions"><button class="btn-save" onclick="addProblem()">💾 Save Problem</button><button class="btn-cancel" onclick="toggleAddForm()">Cancel</button></div>
+    </div>`;
   }
-
-  if (!qs.length) {
-    list.innerHTML = html;
-    empty.style.display = 'block';
-    return;
-  }
-  empty.style.display = 'none';
-
-  const q = searchQ;
-  qs.forEach(item => {
-    const key = getKey(currentTab, item.id);
-    const isDone = done[key];
-    const tags = item.tags.split(',').map(t => `<span class="tag">${t.trim()}</span>`).join('');
-
-    let extraBadges = '';
-    let codeSection = '';
-    let complexitySection = '';
-    let deleteBtn = '';
-
-    if (currentTab === 'dsa') {
-      const diff = item.difficulty || 'easy';
-      const dc = getDiffColor(diff);
-      extraBadges = `<span class="dsa-badge" style="color:${dc};border:1px solid ${dc}33;background:${dc}18">${diff.toUpperCase()}</span>`;
-      if (item.addedToday) extraBadges += `<span class="today-badge">TODAY</span>`;
-
-      if (item.code) {
-        codeSection = `<div class="code">${escHtml(item.code)}</div>`;
-      }
-      if (item.timeComplexity || item.spaceComplexity) {
-        complexitySection = `<div class="complexity-row">
-          ${item.timeComplexity ? `<span class="complexity-pill time-pill">⏱ Time: ${item.timeComplexity}</span>` : ''}
-          ${item.spaceComplexity ? `<span class="complexity-pill space-pill">💾 Space: ${item.spaceComplexity}</span>` : ''}
-        </div>`;
-      }
-      deleteBtn = `<button class="delete-btn" onclick="deleteProblem(${item.id}, event)">🗑 Delete</button>`;
+  if(!qs.length){list.innerHTML=html;empty.style.display='block';return;}
+  empty.style.display='none';
+  qs.forEach(item=>{
+    const key=getKey(currentTab,item.id),isDone=done[key];
+    const tags=item.tags.split(',').map(t=>`<span class="tag">${t.trim()}</span>`).join('');
+    let extra='',codeSection='',complexitySection='',deleteBtn='';
+    if(currentTab==='dsa'){
+      const dc=getDiffColor(item.difficulty||'easy');
+      extra=`<span class="dsa-badge" style="color:${dc};border:1px solid ${dc}33;background:${dc}18">${(item.difficulty||'easy').toUpperCase()}</span>`;
+      if(item.addedToday)extra+=`<span class="today-badge">TODAY</span>`;
+      if(item.code)codeSection=`<div class="code">${escHtml(item.code)}</div>`;
+      if(item.timeComplexity||item.spaceComplexity)complexitySection=`<div class="complexity-row">${item.timeComplexity?`<span class="complexity-pill time-pill">⏱ Time: ${item.timeComplexity}</span>`:''} ${item.spaceComplexity?`<span class="complexity-pill space-pill">💾 Space: ${item.spaceComplexity}</span>`:''}</div>`;
+      deleteBtn=`<button class="delete-btn" onclick="deleteProblem(${item.id},event)">🗑 Delete</button>`;
     }
-
-    const answerHtml = hl(escHtml(item.a), q).replace(/\n/g, '<br>');
-
-    html += `<div class="card ${isDone ? 'done' : ''}" id="card_${key}">
+    html+=`<div class="card ${isDone?'done':''}" id="card_${key}">
       <div class="card-head" onclick="toggleCard('${key}')">
         <span class="q-num">${item.id}</span>
-        <span class="q-text">${hl(escHtml(item.q), q)} ${extraBadges}</span>
+        <span class="q-text">${hl(escHtml(item.q),searchQ)} ${extra}</span>
         <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
       </div>
       <div class="card-body">
-        <div class="answer-text">${answerHtml}</div>
-        ${complexitySection}
-        ${codeSection}
+        <div class="answer-text">${hl(escHtml(item.a),searchQ)}</div>
+        ${complexitySection}${codeSection}
         <div class="tags-row">${tags}</div>
-        <button class="done-btn" onclick="markDone('${key}', event)">${isDone ? 'Completed' : 'Mark as Done'}</button>
+        <button class="done-btn" onclick="markDone('${key}',event)">${isDone?'Completed':'Mark as Done'}</button>
         ${deleteBtn}
       </div>
     </div>`;
   });
-
-  list.innerHTML = html;
+  list.innerHTML=html;
 }
 
-function toggleCard(key) {
-  const el = document.getElementById('card_' + key);
-  if (el) el.classList.toggle('open');
+function toggleCard(key){const el=document.getElementById('card_'+key);if(el)el.classList.toggle('open');}
+function markDone(key,e){e.stopPropagation();done[key]=!done[key];saveDone();renderStats();renderCards();}
+function toggleFilter(t){if(activeFilters.has(t))activeFilters.delete(t);else activeFilters.add(t);renderFilters();renderCards();}
+function clearFilters(){activeFilters.clear();renderFilters();renderCards();}
+function toggleAddForm(){addFormOpen=!addFormOpen;renderCards();if(addFormOpen)setTimeout(()=>{const f=document.getElementById('addForm');if(f)f.scrollIntoView({behavior:'smooth',block:'start'});},50);}
+function addProblem(){
+  const q=document.getElementById('f-q').value.trim(),a=document.getElementById('f-a').value.trim(),code=document.getElementById('f-code').value.trim();
+  const time=document.getElementById('f-time').value.trim()||'O(?)',space=document.getElementById('f-space').value.trim()||'O(?)',diff=document.getElementById('f-diff').value,tags=document.getElementById('f-tags').value.trim()||'general';
+  if(!q||!a){alert('Bhai! Question aur explanation toh daalo!');return;}
+  const newId=dsaProblems.length>0?Math.max(...dsaProblems.map(x=>x.id))+1:1;
+  dsaProblems.push({id:newId,q,a,code,timeComplexity:time,spaceComplexity:space,difficulty:diff,tags,addedToday:true});
+  saveDSAData(dsaProblems);addFormOpen=false;renderStats();renderFilters();renderCards();
 }
+function deleteProblem(id,e){e.stopPropagation();if(!confirm('Delete karna hai?'))return;dsaProblems=dsaProblems.filter(x=>x.id!==id);saveDSAData(dsaProblems);renderStats();renderFilters();renderCards();}
 
-function markDone(key, e) {
-  e.stopPropagation();
-  done[key] = !done[key];
-  saveDone(); renderStats(); renderCards();
+function initFlash(){fcDeck=[...getFiltered()];fcIndex=0;fcFlipped=false;renderFCCard();}
+function renderFCCard(){
+  if(!fcDeck.length)return;
+  const item=fcDeck[fcIndex%fcDeck.length];
+  document.getElementById('fcCounter').textContent=`Card ${(fcIndex%fcDeck.length)+1} of ${fcDeck.length}`;
+  document.getElementById('fcQ').textContent=item.q;
+  let aText=item.a;if(currentTab==='dsa'&&item.code)aText+='\n\n--- CODE ---\n'+item.code;
+  document.getElementById('fcA').textContent=aText;
+  document.getElementById('fcTags').innerHTML=item.tags.split(',').map(t=>`<span class="tag">${t.trim()}</span>`).join('');
+  document.getElementById('fcCard').classList.remove('flipped');fcFlipped=false;
 }
-
-function toggleFilter(t) {
-  if (activeFilters.has(t)) activeFilters.delete(t); else activeFilters.add(t);
-  renderFilters(); renderCards();
+function flipCard(){fcFlipped=!fcFlipped;document.getElementById('fcCard').classList.toggle('flipped',fcFlipped);}
+function nextCard(mark){
+  if(mark&&fcDeck.length){const item=fcDeck[fcIndex%fcDeck.length];done[getKey(currentTab,item.id)]=true;saveDone();renderStats();}
+  fcIndex++;if(fcIndex>=fcDeck.length)fcIndex=0;renderFCCard();
 }
-function clearFilters() { activeFilters.clear(); renderFilters(); renderCards(); }
+function shuffleCards(){for(let i=fcDeck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[fcDeck[i],fcDeck[j]]=[fcDeck[j],fcDeck[i]];}fcIndex=0;renderFCCard();}
 
-function toggleAddForm() {
-  addFormOpen = !addFormOpen;
-  renderCards();
-  if (addFormOpen) {
-    setTimeout(() => {
-      const f = document.getElementById('addForm');
-      if (f) f.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 50);
-  }
+function setMode(mode){
+  currentMode=mode;
+  document.getElementById('btnStudy').classList.toggle('active',mode==='study');
+  document.getElementById('btnFlash').classList.toggle('active',mode==='flash');
+  document.getElementById('studyView').style.display=mode==='study'?'block':'none';
+  document.getElementById('flashView').classList.toggle('active',mode==='flash');
+  if(mode==='flash')initFlash();
 }
-
-function addProblem() {
-  const q = document.getElementById('f-q').value.trim();
-  const a = document.getElementById('f-a').value.trim();
-  const code = document.getElementById('f-code').value.trim();
-  const time = document.getElementById('f-time').value.trim() || 'O(?)';
-  const space = document.getElementById('f-space').value.trim() || 'O(?)';
-  const diff = document.getElementById('f-diff').value;
-  const tags = document.getElementById('f-tags').value.trim() || 'general';
-
-  if (!q || !a) { alert('Bhai! Question aur explanation toh daalo!'); return; }
-
-  const newId = dsaProblems.length > 0 ? Math.max(...dsaProblems.map(x => x.id)) + 1 : 1;
-  dsaProblems.push({ id: newId, q, a, code, timeComplexity: time, spaceComplexity: space, difficulty: diff, tags, addedToday: true });
-  saveDSAData(dsaProblems);
-  addFormOpen = false;
-  renderStats(); renderFilters(); renderCards();
+function setTab(tab){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  const el=document.querySelector('.tab-'+tab);if(el)el.classList.add('active');
+  currentTab=tab;activeFilters.clear();searchQ='';addFormOpen=false;
+  document.getElementById('searchInput').value='';
+  const isDiag=tab==='diagrams';
+  document.getElementById('studyView').style.display=isDiag?'none':(currentMode==='study'?'block':'none');
+  document.getElementById('flashView').classList.toggle('active',!isDiag&&currentMode==='flash');
+  document.getElementById('diagramView').style.display=isDiag?'block':'none';
+  document.getElementById('statsBar').style.display=isDiag?'none':'flex';
+  document.getElementById('filtersRow').style.display=isDiag?'none':'flex';
+  document.getElementById('btnStudy').style.display=isDiag?'none':'';
+  document.getElementById('btnFlash').style.display=isDiag?'none':'';
+  if(!isDiag){renderStats();renderFilters();renderCards();if(currentMode==='flash')initFlash();}
 }
-
-function deleteProblem(id, e) {
-  e.stopPropagation();
-  if (!confirm('Delete karna hai is problem ko?')) return;
-  dsaProblems = dsaProblems.filter(x => x.id !== id);
-  saveDSAData(dsaProblems);
-  renderStats(); renderFilters(); renderCards();
-}
-
-// FLASHCARD
-function initFlash() {
-  const qs = getFiltered();
-  fcDeck = [...qs]; fcIndex = 0; fcFlipped = false;
-  renderFCCard();
-}
-
-function renderFCCard() {
-  if (!fcDeck.length) return;
-  const item = fcDeck[fcIndex % fcDeck.length];
-  document.getElementById('fcCounter').textContent = `Card ${(fcIndex % fcDeck.length) + 1} of ${fcDeck.length}`;
-  document.getElementById('fcQ').textContent = item.q;
-  let aText = item.a;
-  if (currentTab === 'dsa' && item.code) aText += '\n\n--- CODE ---\n' + item.code;
-  document.getElementById('fcA').textContent = aText;
-  document.getElementById('fcTags').innerHTML = item.tags.split(',').map(t => `<span class="tag">${t.trim()}</span>`).join('');
-  document.getElementById('fcCard').classList.remove('flipped');
-  fcFlipped = false;
-}
-
-function flipCard() { fcFlipped = !fcFlipped; document.getElementById('fcCard').classList.toggle('flipped', fcFlipped); }
-function nextCard(mark) {
-  if (mark && fcDeck.length) { const item = fcDeck[fcIndex % fcDeck.length]; done[getKey(currentTab, item.id)] = true; saveDone(); renderStats(); }
-  fcIndex++;
-  if (fcIndex >= fcDeck.length) fcIndex = 0;
-  renderFCCard();
-}
-function shuffleCards() {
-  for (let i = fcDeck.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [fcDeck[i], fcDeck[j]] = [fcDeck[j], fcDeck[i]]; }
-  fcIndex = 0; renderFCCard();
-}
-
-function setMode(mode) {
-  currentMode = mode;
-  document.getElementById('btnStudy').classList.toggle('active', mode === 'study');
-  document.getElementById('btnFlash').classList.toggle('active', mode === 'flash');
-  document.getElementById('studyView').style.display = mode === 'study' ? 'block' : 'none';
-  document.getElementById('flashView').classList.toggle('active', mode === 'flash');
-  if (mode === 'flash') initFlash();
-}
-
-function setTab(tab) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  const el = document.querySelector('.tab-' + tab);
-  if (el) el.classList.add('active');
-  currentTab = tab;
-  activeFilters.clear();
-  searchQ = '';
-  addFormOpen = false;
-  document.getElementById('searchInput').value = '';
-
-  const isDiag = tab === 'diagrams';
-  document.getElementById('studyView').style.display = isDiag ? 'none' : (currentMode === 'study' ? 'block' : 'none');
-  document.getElementById('flashView').classList.toggle('active', !isDiag && currentMode === 'flash');
-  document.getElementById('diagramView').style.display = isDiag ? 'block' : 'none';
-  document.getElementById('statsBar').style.display = isDiag ? 'none' : 'flex';
-  document.getElementById('filtersRow').style.display = isDiag ? 'none' : 'flex';
-  document.getElementById('btnStudy').style.display = isDiag ? 'none' : '';
-  document.getElementById('btnFlash').style.display = isDiag ? 'none' : '';
-
-  if (!isDiag) { renderStats(); renderFilters(); renderCards(); if (currentMode === 'flash') initFlash(); }
-}
-
-document.getElementById('searchInput').addEventListener('input', e => {
-  searchQ = e.target.value.trim();
-  renderCards();
-  if (currentMode === 'flash') initFlash();
-});
-
-// Init
-renderStats(); renderFilters(); renderCards();
+document.getElementById('searchInput').addEventListener('input',e=>{searchQ=e.target.value.trim();renderCards();if(currentMode==='flash')initFlash();});
+renderStats();renderFilters();renderCards();
 </script>
 </body>
 </html>
